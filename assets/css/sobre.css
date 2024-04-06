@@ -1,0 +1,65 @@
+.sobre_nos{
+    text-align: center;
+    margin: 30px 70px;
+}
+
+.sobre_nos p{
+    padding-top: 20px;
+    width: 800px; line-height: 1.5em;
+    margin: 0 auto;
+}
+
+.sobre_nos h1{    
+    font: bolder 27px var(--Roboto);
+    color: var(--índigo_blue);
+    margin: 40px 0 30px 0;
+}
+
+.proposito{
+    display: flex;
+    gap: 40px; /* Espaçamento entre divs flexíveis */
+    margin: 70px;
+    text-align: justify;
+}
+
+.missao, .visao, .valores{
+    background-color: white ;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.086); border-radius: 25px;
+    padding: 30px; transition: all .5s; 
+    width: 30%;
+}
+
+.missao:hover, .visao:hover, .valores:hover {
+    transform: scale(1.03); /* Ao passar o mouse a div terá uma escala maior */
+}
+
+.icon_proposito i{
+    font-size: 50px; margin-right: 20px;
+}
+
+.missao .icon_proposito i{
+    color: var(--medium_red);
+}
+
+.visao .icon_proposito i{
+    color: var(--sapphire_blue);
+}
+
+.valores .icon_proposito i{
+    color: var(--verde-azulado);
+}
+
+.titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.titulo h2{
+    font: 500 20px var(--Roboto);
+}
+
+p{
+    text-indent: 1.2em; font: lighter 18px var(--Allura); line-height: 1.5em;
+}
