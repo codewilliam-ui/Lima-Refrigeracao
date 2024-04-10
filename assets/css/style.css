@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Rubik+Scribble&display=swap');
 @import url('https://fonts.googleapis.com/css2? family= Allura & family= Aref+Ruqaa+Ink:wght@400;700 & family= Cookie & family= Roboto:wght@300; 400;700 & display=swap');
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,900);
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 
 * {
     margin: 0;
@@ -55,7 +56,8 @@ body {
     --Allura: 'Allura', sans-serif;
     --Rubik: 'Rubik Scribble';
     --Kalam: 'Kalam';
-    --Titillium: 'Titillium Web'
+    --Titillium: 'Titillium Web';
+    --Poppins: 'Poppins';
 }
 
 nav {
@@ -513,7 +515,7 @@ nav .navbar li {
 }
 
 .icon1::after {
-    content: "Peças Originais";
+    content: "Diferentes soluções para cada situação";
 }
 
 .icon2::after {
@@ -534,7 +536,7 @@ nav .navbar li {
 .icon3::after,
 .icon4::after {
     position: absolute;
-    background-color: var(--azure);
+    background-color: white;
     width: 100%;
     height: 100%;
     top: 50%;
@@ -546,6 +548,7 @@ nav .navbar li {
     align-items: center;
     display: flex;
     justify-content: center;
+    font: 500 20px var(--Titillium);
 }
 
 .icon1:hover::after,
@@ -602,13 +605,38 @@ nav .navbar li {
     width: 100%;
     margin: 0 auto;
 }
-
+section.module span{
+    font: 400 12px 'Poppins';    
+    letter-spacing: .340em;
+    text-transform: uppercase;
+    color: white;
+    margin: 0 auto 10px auto;
+}
 section.module h1{
-    font-weight: 900;
+    font: 700 40px var(--Titillium);
+    color: white;
+    z-index: 2;
+    margin: 0 auto;
+    text-align: center;
 }
-section.module p{
-    margin-bottom: 40px;
+section.module button{
+    margin: 45px auto 0 auto;
+    color: var(--cinza-dark);
+    background-color: var(--amarelo);
+    padding: 23px 36px;
+    z-index: 2;
+    border: none;
+    transition: all .5s;
+    font: 400 14px var(--Poppins);    
+    letter-spacing: 5px;
 }
+section.module button:hover{
+    background-color: transparent;
+    color: #423748;
+    border: 1px solid white;
+}
+
+
 
 section.module:last-child{
     margin-bottom: 0;
@@ -637,14 +665,13 @@ section.module.parallax::after{
     width: 100%;
     position: absolute;
     z-index: 1;
-    background: -moz-linear-gradient(to bottom, rgba(0,0,0,0) 40%, black 100%);
-    background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 40%, black 100%);
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 40%, var(--space) 100%);
+    background: -moz-linear-gradient(to bottom, rgba(0,0,0,0) 40%, #00000094 90%);
+    background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 40% #00000094 90%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, #00000094 90%);
 }
 
 section.module.parallax{
-    background-image: url(../img/ferramentas.png);
-    filter: grayscale(30%);
+    background-image: url(../img/parallax.png);
 }
 
 
