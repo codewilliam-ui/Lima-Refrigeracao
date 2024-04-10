@@ -1,3 +1,260 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Rubik+Scribble&display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Allura & family= Aref+Ruqaa+Ink:wght@400;700 & family= Cookie & family= Roboto:wght@300; 400;700 & display=swap');
+
+*{
+    margin: 0; padding: 0; text-decoration: none; list-style: none; font-family: var(--Roboto); line-height: 1.5em;
+}
+body{
+    width: 100%;
+}
+:root{
+    /* Variáveis da cor azul */
+    --azure: #E8F1F3;
+    --carolina_blue: #1C9CD7;
+    --celadon_blue: #247BA0;
+    --sapphire_blue: #014990;
+    --prussian_blue: #002F5B;
+    --índigo_blue: #001030;
+    --space: #010b1c;
+
+    /* Variável da cor vermelha */
+    --medium_red: #A20202;
+
+    /* Variáveis da cor verde */
+    --verde-azulado: #009a9f;
+    --verde:#30EA66;
+
+    --amarelo: #FCBF02;
+    --cinza-clarinho: #F8F8F8;
+    --azul-claro: #6E93f7;
+    --azul-claro2: #4070F4;
+
+
+
+    /* Variável da cor cinza */
+    --cinza: #424242;
+    --cinza-claro:#F2F2F2;
+    --cinza-medio: #A9A9A9;
+    --cinza-dark: #333333;
+    --cinza-escuro: #171717;
+
+    /* Variáveis das fontes */
+    --Roboto: 'Roboto', sans-serif;
+    --Allura: 'Allura', sans-serif;
+    --Rubik: 'Rubik Scribble';
+    --Kalam: 'Kalam';
+}
+
+/* ============================================ CARROSSEL ======================================== */
+.carrossel{
+    height: 100vh;
+    width: 100%;
+}
+
+.swiper {
+    width: 90%;
+    height: 300px;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    overflow: hidden;
+    border-radius: 30px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .swiper-slide .comentarios{
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+.swiper-slide .container_comentario{
+    padding: 25px;
+    background-color: var(--cinza-clarinho);
+    border-radius: 30px;
+    position: relative;
+    height: 18vh;
+}
+
+.swiper-slide .icone-google {
+    position: absolute;
+    top: 48px;
+    left: 48px;   
+    width: 20px;     
+}
+  
+.mes{
+    position: relative;
+    display: inline-block;
+}
+
+.mes span{
+    color: #BCBCBC;
+    font: 400 14px var(--Roboto);
+}
+
+.flex_icon{
+    display: flex;
+}
+.flex_icon .img1{
+    width: auto;
+    height: 40px;
+}
+
+.icone-google .balao{
+    visibility: hidden;
+    width: auto;
+    background-color: #333;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.icone-google .balao::after{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.icone-google:hover .balao{
+    visibility: visible;
+    opacity: 1;
+}
+
+.google{
+    width: auto;
+    height: 20px;
+    background-color: var(--cinza-clarinho);
+    padding: 1.5px;
+    border-radius: 50%;
+}
+
+.foto{
+    position: relative;
+}
+
+.informacao{
+    display: flex;
+}
+
+.informacao h3{
+    color: #111111;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    margin: 0;
+    font: 550 16px var(--Roboto);
+}
+
+.referencia{
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    text-align: left;
+}
+.base{
+    margin-left: 13px;
+}
+.informacao img{
+    width: auto;
+    height: 15px;
+    margin-left: 5px;
+}
+
+.informacao a:hover{
+    text-decoration: 1px underline #111111;
+}
+
+.fa-star{
+    width: auto;
+    height: 17px;
+    color: var(--amarelo) ;
+}
+.avaliacao{    
+    justify-content: left;
+    display: flex;
+}
+.avaliacao i{
+    margin-bottom: 7px;
+}
+
+.container_comentario p{
+    font: normal 16px 'Arial', sans-serif;
+    color:#111111 ;
+    line-height: 1.5em;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+.swiper-navBtn{
+    color:var(--azul-claro);
+    transition: color .3s ease;
+}
+.swiper-navBtn::before, .swiper-navBtn::after{
+    font-size: 40px;
+}
+.swiper-button-next{
+    right: 0;
+}
+.swiper-button-prev{
+    left: 0;
+}
+.swiper-pagination-bullet{
+    background-color: var(--azul-claro);
+    opacity: 1;
+}
+.swiper-pagination-bullet-active{
+    background-color: var(--azul-claro2);
+}
+@media screen and (max-width:768px){
+    .swiper{
+        padding: 0 10px;
+    }
+    .swiper-navBtn{
+        display: none;
+    }
+
+}
+  /* ============================================ FIM CARROSSEL ======================================== */
+
+
 .sobre_nos{
     text-align: center;
     margin: 30px 70px;
