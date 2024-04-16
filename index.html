@@ -9,6 +9,9 @@
     <link rel="shortcut icon" href="assets/img/congelando.png" type="image/x-icon"
         href="https://www.flaticon.com/br/icones-gratis/congelar" title="congelar ícones">
 
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+
     <!--Font Awesome (Ícones onlines)-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -27,24 +30,16 @@
 
 <body>
 
-    <header id="header"><!-- Cabeçalho -->
-        <nav> <!-- Navegador  -->
-            <div class="logo"><!-- Logo do site -->
-                <img src="assets/img/LogoLM.svg" alt="">
-            </div>
-            <div class="navbar"> <!-- Barra de navegação -->
-                <ul>
-                    <a href="assets/html/sobre.html">
-                        <li>Sobre Nós</li>
-                    </a>
-                    <a href="#">
-                        <li>Serviços</li>
-                    </a>
-                    <a href="#">
-                        <li>Contatos</li>
-                    </a>
-                </ul>
-            </div>
+    
+    <header class="header">
+        <nav class="nav">
+          <a href="/" class="logo"><img src="assets/img/LogoLM.svg" alt="Logotipo"></a>
+          <button class="hamburger"></button>
+          <ul class="nav-list">
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contatos</a></li>
+          </ul>
         </nav>
     </header>
 
@@ -83,7 +78,7 @@
             <img class="banner1" src="assets/img/Banner 2.png" alt="Banner 2">
             <div class="sobreposicao">
                 <div class="texto_sobreposto">
-                    <h1>Assistência técnica completa para<br> sua máquina de lavar!</h1>
+                    <h1>Assistência técnica completa para sua máquina de lavar!</h1>
                     <img src="assets/img/maquinaa de lavar.png" alt="">
                 </div>
                 <a href="tel:+556184491224"">
@@ -101,7 +96,7 @@
         <img class="banner1" src="assets/img/Banner 3.png" alt="Banner 3">
         <div class="sobreposicao">
             <div class="texto_sobreposto">
-                <h1>Seu refrigerador resolveu <br> tirar férias?</h1>
+                <h1>Seu refrigerador resolveu tirar férias?</h1>
                 <img src="assets/img/Refrigerador.png" alt="">
             </div>
             <a href="tel:+556184491224"">
@@ -119,7 +114,7 @@
         <img class="banner1" src="assets/img/Banner 4.png" alt="Banner 4">
         <div class="sobreposicao">
             <div class="texto_sobreposto">
-                <h1>Seu micro-ondas está mais temperamental <br> que uma diva do cinema?</h1>
+                <h1>Seu micro-ondas está mais temperamental que uma diva do cinema?</h1>
                 <img src="assets/img/Microondas.png" alt="">
             </div>
             <a href="tel:+556184491224"">
@@ -212,58 +207,39 @@
             <div class="texto_servico">
                 <h2>Nossos Serviços Especializados</h2>
             </div>
-
-            <div class="solucoes">
-                <div class="img_refrigeracao">
-                    <img src="assets/img/nossos serviços.png" alt="Refrigeração">
-                </div>
-                <div class="assistencia">
-                    <div>
-                        <span class="icon_assist"><i class="fa-solid fa-air-conditioner"></i></span>
-                        <div class="flex_assist">
-                            <h3 class="text_assist">Ar-condicionados</h3>
-                            <p class="paragraph_assist">Oferecemos serviços de instalação, manutenção preventiva e
-                                reparo para garantir que você desfrute de um ambiente fresco e confortável em sua casa
-                                ou escritório durante todo o ano.</p>
+            <div class="servicos-ctn">
+                <div class="flex-servicos">
+                    <img src="assets/img/serviços.png" alt="">
+                    <div class="flex-container">
+                        <div class="container-text">
+                            <h2>Ar-condicionado e climatizadores</h2>
+                            <p>Oferecemos instalação, manutenção e reparo para garantir que o seu sistema de climatização funcione de forma eficiente e confiável.</p>
+                        </div>
+                        <div class="container-text">
+                            <h2>Expositores, Freezers e Geladeiras</h2>
+                            <p>Nossos técnicos qualificados estão prontos para resolver qualquer problema e garantir o funcionamento ideal dos seus equipamentos de refrigeração.</p>
+                        </div>
+                        <div class="container-text">
+                            <h2>Microondas</h2>
+                            <p>Nossa equipe está preparada para garantir o desempenho ideal do seu microondas, mantendo-o em perfeitas condições de uso.</p>
+                        </div>
+                        <div class="container-text last">
+                            <h2>Outros Serviços</h2>
+                            <p>Oferecemos manutenção para uma variedade de outros eletrodomésticos, incluindo máquinas de lavar, tanquinhos e bebedouros.</p>
                         </div>
                     </div>
-
-                    <div>
-                        <span class="icon_assist"><i></i></span>
-                        <div class="flex_assist">
-                            <h3 class="text_assist">Geladeiras e Freezers</h3>
-                            <p class="paragraph_assist">Com nossa experiência em reparo e manutenção de geladeiras e
-                                freezers, garantimos que seus alimentos sejam armazenados com segurança e frescor. </p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <span class="icon_assist"><i></i></span>
-                        <div class="flex_assist">
-                            <h3 class="text_assist">Máquinas de lavar</h3>
-                            <p class="paragraph_assist"> Garantimos que suas roupas sejam lavadas com eficiência e sem
-                                complicações, desde vazamentos até problemas mecânicos complexos.</p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <span class="icon_assist"><i></i></span>
-                        <div class="flex_assist">
-                            <h3 class="text_assist">Microondas</h3>
-                            <p class="paragraph_assist">Um serviço rápido e eficiente para resolver desde problemas de
-                                aquecimento até falhas no painel de controle, para que você possa usar seu microondas
-                                sem preocupações.</p>
-                        </div>
-                    </div>
-                </div>
             </div>
+
+            </div>
+                 
+                        
         </section>
 
         <div class="container-wrapper">
             <section class="module parallax">
                 <span>SOLUÇÕES DE REPARO AO SEU ALCANCE</span>
-                <h1>High-Quality and Friendly <br>
-                    Services at Fair Prices </h1>
+                <h1>Serviços de Alta Qualidade e Acessíveis <br>
+                    com Preços Justos</h1>
                 <button>SAIBA MAIS</button>
             </section>
         </div>
@@ -412,6 +388,7 @@
 
     </main>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/app.js"></script>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

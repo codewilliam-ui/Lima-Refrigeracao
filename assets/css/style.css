@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2? family= Allura & family= Aref+Ruqaa+Ink:wght@400;700 & family= Cookie & family= Roboto:wght@300; 400;700 & display=swap');
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,900);
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Livvic:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,900,900italic);
 
 * {
     margin: 0;
@@ -58,63 +59,143 @@ body {
     --Kalam: 'Kalam';
     --Titillium: 'Titillium Web';
     --Poppins: 'Poppins';
+    --Livvic: 'Livvic';
 }
 
-nav {
+/* ======================= Cabeçalho =======================  */
+
+  
+  .nav {
+    height: 70px;
+    margin-inline: auto;
     display: flex;
-    /* Display flexível (conteúdos lado a lado) */
     justify-content: space-between;
-    /* Mantem os conteudos nas margens da página */
     align-items: center;
-    /* Alinha verticalmente os conteúdos do navegador */
-    background-color: white;
-    /* Cor de fundo do navegador */
     position: fixed;
-    /* Mantém o navegador fixo na página */
+    background-color: white;
     width: 100%;
-    /* Mantém o navegador com 100% do comprimento da viewport */
-    z-index: 2;
-    /* Sobreposição de conteúdos */
-    box-shadow: -2px 0 15px rgba(255, 255, 255, 0.537), -3px 0 16px rgba(38, 0, 255, 0.455);
-    /* Sombra do navegador (vertical, horizontal, espalhamento e cor) */
+    z-index: 4;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.081);
 }
-
-nav .logo img {
+  
+  .logo img {    
     width: 240px;
     /* largura da logotipo */
     height: auto;
     /* Altura da logotipo */
-    padding: 3px 70px;
-    /* Espaçamento interno */
-    transition: all .3s;
-}
-
-nav .logo img:hover {
+    transition: .7s ease;
+    margin-left: 60px;
+  }
+  .logo img:hover {
     transform: scale(1.03);
-}
-
-nav .navbar ul {
+  }
+  
+  .nav-list {
     display: flex;
-    /* Display flexível (conteúdos lado a lado) */
-    padding-right: 40px;
-    /* Espaçamento interno (lado direito) */
-}
+    gap: 32px;
+    list-style: none;
+    margin-right: 60px;
+  }
+  
+  .nav-list a {
+    font-size: 18px;
+    color: black;
+    padding-block: 16px;
+  }
+  
 
-nav .navbar li {
-    margin: 0 30px;
-    /* Margin dos ícones */
-    font: 500 18px var(--Roboto);
-    /* estilização da fonte (expessura, tamanho, ) */
-    color: var(--sapphire_blue);
-    /* cor do ícone */
-    border-bottom: 2px solid rgba(255, 255, 255, 0);
-    transition: .3s;
-}
+  
+  .hamburger {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid black;
+    cursor: pointer;
+  }
+  
+  .hamburger::after,
+  .hamburger::before {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: black;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+  }
+  
+  @media (max-width: 750px) {
+    .hamburger {
+      display: block;
+      z-index: 1;
+    }
+  
+    .nav-list {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: white;
+      clip-path: circle(100px at 90% -15%);
+      transition: 1s ease-out;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap: 0;
+      pointer-events: none;
+    }
+  
+    .nav-list a {
+      font-size: 24px;
+      opacity: 0;
+    }
+  
+    .nav-list li:nth-child(1) a {
+      transition: 0.5s 0.2s;
+    }
+  
+    .nav-list li:nth-child(2) a {
+      transition: 0.5s 0.4s;
+    }
+  
+    .nav-list li:nth-child(3) a {
+      transition: 0.5s 0.6s;
+    }
+  
+    /* Estilos ativos */
+  
+    .nav.active .nav-list {
+      clip-path: circle(1500px at 90% -15%);
+      pointer-events: all;
+    }
+  
+    .nav.active .nav-list a {
+      opacity: 1;
+    }
+  
+    .nav.active .hamburger {
+      position: fixed;
+      top: 26px;
+      right: 16px;
+      border-top-color: transparent;
+    }
+  
+    .nav.active .hamburger::before {
+      transform: rotate(135deg);
+    }
+  
+    .nav.active .hamburger::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+  }
 
-.navbar li:hover {
-    border-bottom: 2px solid var(--sapphire_blue);
-}
+/* ======================= Fim Cabeçalho =======================  */
 
+
+/* ======================= Carrossel Banner ======================== */
 .slider {
     margin: 0 auto;
     width: 100%;
@@ -124,7 +205,7 @@ nav .navbar li {
 
 .slides {
     width: 400%;
-    height: 100vh;
+    height: 100%;
     display: flex;
 }
 
@@ -141,7 +222,7 @@ nav .navbar li {
 
 .slide img {
     /* Sempre levar em consideração o tamanho original da imagem e da tela */
-    height: 100vh;
+    height: 100%;
     width: 100vw;
 }
 
@@ -230,7 +311,7 @@ nav .navbar li {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: rgb(0 0 0 / 59%);
 }
 
@@ -244,18 +325,17 @@ nav .navbar li {
 }
 
 .texto_sobreposto h1 {
+    width: 50%;
     font: 500 3vw var(--Roboto);
     color: white;
     margin-left: 40px;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.259);
-    line-height: 1.5em;
-    /* Espçamento do Parágrafo */
-}
-.texto_sobreposto h1 {
+    line-height: 1.5em;    
     animation-duration: 3s;
     animation-name: slidein;
     animation-direction: alternate;
-  }
+    /* Espçamento do Parágrafo */
+}
   
   @keyframes slidein {
     from {
@@ -314,7 +394,7 @@ nav .navbar li {
     position: absolute;
     top: 71%;
     right: 26vw;
-    z-index: 3;
+    z-index: -1;
     display: flex;
     align-items: center;
 }
@@ -361,6 +441,8 @@ nav .navbar li {
     }
    }
 
+/* ======================= Fim Carrossel Banner ======================== */
+
 .Nossos_compromissos {
     position: relative;
     height: 550px;
@@ -395,12 +477,6 @@ nav .navbar li {
  }
 }
 
-/* ============================================ CARROSSEL ======================================== */
-.carrossel{
-    height: 100vh;
-    align-items: center;
-
-}
 
 /* ========================== Carrossel Diferenciais ========================== */
 .mySwiper{
@@ -561,9 +637,9 @@ nav .navbar li {
 
 .texto_servico h2 {
     text-align: center;
-    font: bolder 27px var(--Roboto);
+    font: bolder 40px var(--Titillium);
     color: var(--índigo_blue);
-    margin: 20px 0 60px 0
+    margin: 20px 0
 }
 
 .solucoes {
@@ -573,32 +649,50 @@ nav .navbar li {
     align-items: center;
 }
 
-.text_assist {
-    font: 20px var(--Kalam);
+/* ======================= Seção Serviços ======================= */
+.servicos{
+    height: auto;
+    padding-bottom: 40px;
 }
 
-.flex_assist p {
-    opacity: 0;
-    transition: .7s;
-    font: light 16px var(--Allura);
-    padding: 0 20px;
+.flex-servicos{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
 }
-
-.flex_assist p:hover {
-    opacity: 1;
-}
-
-.assistencia {
-    margin: 0 0 20px 40px;
-}
-
-
-.img_refrigeracao img {
+.flex-servicos img{
     width: auto;
-    height: 480px;
-    filter: drop-shadow(2px 2px 30px #52545817);
-    transform: rotateY(180deg);
+    height: 545px;
+    margin: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.126);
+    
 }
+.flex-container{
+    width: 570px;
+    text-align: justify;
+    margin: 25px;
+}
+.container-text{
+    width: 100%;
+}
+.container-text h2{
+    font: 600 22px var(--Livvic);
+    margin-bottom: 5px;
+}
+
+.container-text p{
+    font: 400 19px var(--Livvic);
+    line-height: 1.75em;
+    padding-bottom: 15px;
+}
+.container-text.last p{
+    padding-bottom: 0;
+}
+
+
+/* ===================== Fim Seção Serviços ====================== */
+
 
 /* ======================= Paralalax ======================================== */
 .container-wrapper{
@@ -611,6 +705,7 @@ section.module span{
     text-transform: uppercase;
     color: white;
     margin: 0 auto 10px auto;
+    z-index: 2;
 }
 section.module h1{
     font: 700 40px var(--Titillium);
@@ -625,14 +720,14 @@ section.module button{
     background-color: var(--amarelo);
     padding: 23px 36px;
     z-index: 2;
-    border: none;
+    border: 1px solid transparent;
     transition: all .5s;
     font: 400 14px var(--Poppins);    
     letter-spacing: 5px;
 }
 section.module button:hover{
     background-color: transparent;
-    color: #423748;
+    color: white;
     border: 1px solid white;
 }
 
@@ -665,9 +760,9 @@ section.module.parallax::after{
     width: 100%;
     position: absolute;
     z-index: 1;
-    background: -moz-linear-gradient(to bottom, rgba(0,0,0,0) 40%, #00000094 90%);
-    background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 40% #00000094 90%);
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, #00000094 90%);
+    background: -moz-linear-gradient(to bottom, rgba(0,0,0,0) 0%, #00000094 100%);
+    background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 0% #00000094 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #00000094 100%);
 }
 
 section.module.parallax{
