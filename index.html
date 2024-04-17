@@ -11,6 +11,7 @@
 
     <script src="https://unpkg.com/scrollreveal"></script>
 
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 
     <!--Font Awesome (Ícones onlines)-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -31,7 +32,7 @@
 <body>
 
     
-    <header class="header">
+    <header class="header" id="header">
         <nav class="nav">
           <a href="/" class="logo"><img src="assets/img/LogoLM.svg" alt="Logotipo"></a>
           <button class="hamburger"></button>
@@ -205,28 +206,38 @@
 
         <section class="servicos">
             <div class="texto_servico">
-                <h2>Nossos Serviços Especializados</h2>
+                <h1>Nossos Serviços Especializados</h2>
             </div>
             <div class="servicos-ctn">
                 <div class="flex-servicos">
                     <img src="assets/img/serviços.png" alt="">
                     <div class="flex-container">
-                        <div class="container-text">
-                            <h2>Ar-condicionado e climatizadores</h2>
+                        <details class=".dropdown">
+                            <summary>
+                                <h2><i class="fi fi-rr-air-conditioner ttn"></i>Ar-condicionado e climatizadores </h2><i class="fa-solid fa-chevron-up ttn"></i>
+                            </summary>
                             <p>Oferecemos instalação, manutenção e reparo para garantir que o seu sistema de climatização funcione de forma eficiente e confiável.</p>
-                        </div>
-                        <div class="container-text">
-                            <h2>Expositores, Freezers e Geladeiras</h2>
+                        </details>
+                        <details class=".dropdown">
+                            <summary>
+                                <h2><i class="fa-solid fa-snowflake ttn"></i>Expositores, Freezers e Geladeiras</h2><i class="fa-solid fa-chevron-up ttn"></i>
+                            </summary>
                             <p>Nossos técnicos qualificados estão prontos para resolver qualquer problema e garantir o funcionamento ideal dos seus equipamentos de refrigeração.</p>
-                        </div>
-                        <div class="container-text">
-                            <h2>Microondas</h2>
-                            <p>Nossa equipe está preparada para garantir o desempenho ideal do seu microondas, mantendo-o em perfeitas condições de uso.</p>
-                        </div>
-                        <div class="container-text last">
-                            <h2>Outros Serviços</h2>
-                            <p>Oferecemos manutenção para uma variedade de outros eletrodomésticos, incluindo máquinas de lavar, tanquinhos e bebedouros.</p>
-                        </div>
+                        </details>
+                        <details class=".dropdown">
+                            <summary>
+                                <h2><i class="fi fi-rr-heat ttn"></i>Microondas</h2><i class="fa-solid fa-chevron-up ttn"></i>
+                            </summary>
+                            <p>Estamos preparados para garantir o desempenho ideal do seu microondas, mantendo-o em perfeitas condições de uso.</p>
+                        </details>
+                        <details class=".dropdown">
+                            <summary>
+                                <h2><i class="fas fa-tools ttn"></i>Outros Serviços</h2><i class="fa-solid fa-chevron-up ttn"></i>
+                            </summary> 
+                            <p>Oferecemos manutenção para uma variedade de outros eletrodomésticos, incluindo máquinas de lavar, tanquinhos e bebedouros</p>
+                        
+                        </details>
+                        
                     </div>
             </div>
 

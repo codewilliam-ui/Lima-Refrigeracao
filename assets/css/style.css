@@ -17,7 +17,7 @@
 }
 
 body {
-    width: 100%;
+    width: 100vw;
     overflow-x: hidden;
 }
 
@@ -33,6 +33,7 @@ body {
 
     /* Variável da cor vermelha */
     --medium_red: #A20202;
+    --tomate: #FF814D;
 
     /* Variáveis da cor verde */
     --verde-azulado: #009a9f;
@@ -42,7 +43,7 @@ body {
     --cinza-clarinho: #F8F8F8;
     --azul-claro: #6E93f7;
     --azul-claro2: #4070F4;
-
+    --winter: #A1E1F6;
 
 
     /* Variável da cor cinza */
@@ -100,7 +101,24 @@ body {
   .nav-list a {
     font-size: 18px;
     color: black;
-    padding-block: 16px;
+    padding-block: 5px;
+  }
+  nav a{
+    position: relative;
+  }
+  nav a::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    background-color: var(--space);
+    bottom: 0;
+    left: 0;
+    transition: .5s ease-in-out;
+  }
+  nav a:hover::after{
+    width: 100%;
+
   }
   
 
@@ -635,59 +653,98 @@ body {
 }
 
 
-.texto_servico h2 {
-    text-align: center;
-    font: bolder 40px var(--Titillium);
-    color: var(--índigo_blue);
-    margin: 20px 0
-}
 
-.solucoes {
-    display: flex;
-    justify-content: left;
-    margin: 0 70px;
-    align-items: center;
-}
+
+
 
 /* ======================= Seção Serviços ======================= */
+.texto_servico h1 {
+    text-align: center;
+    font: bolder 35px var(--Livvic);
+    color: var(--índigo_blue);
+    margin: 0 0 25px 0;
+}
+
 .servicos{
     height: auto;
-    padding-bottom: 40px;
+    margin: 20px 0 50px 0;
 }
 
 .flex-servicos{
    display: flex;
    flex-wrap: wrap;
-   align-items: center;
+   align-items: flex-start;
    justify-content: center;
 }
 .flex-servicos img{
     width: auto;
-    height: 545px;
+    height: auto;
     margin: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.126);
-    
+    max-width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.134);
 }
-.flex-container{
-    width: 570px;
+ .flex-container{
+    width: 550px;
+    margin: 10px 25px;
+}
+.flex-container p{
     text-align: justify;
-    margin: 25px;
 }
-.container-text{
-    width: 100%;
+section.servicos details[open] summary, section.servicos details summary:hover {
+    background-color: var(--verde-azulado);
+    color: white;
 }
-.container-text h2{
-    font: 600 22px var(--Livvic);
-    margin-bottom: 5px;
+section.servicos details summary{
+    padding: 15px 20px;
+    transition: .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section.servicos .fi.fi-rr-air-conditioner{
+    color: var(--cinza-dark);
+}
+section.servicos .fa-solid.fa-snowflake{
+    color: var(--winter);
+}
+section.servicos .fi.fi-rr-heat{
+    color: var(--medium_red);
+}
+section.servicos .fas.fa-tools{
+    color: var(--prussian_blue);
+}
+section.servicos details[open] summary .ttn {
+    color: white;   
+}
+section.servicos details summary:hover .ttn{
+    color: white; 
+}
+section.servicos details summary h2 i{
+    margin-right: 20px;
+}
+section.servicos details summary h2{
+    font: 600 17px var(--Livvic); 
 }
 
-.container-text p{
-    font: 400 19px var(--Livvic);
-    line-height: 1.75em;
-    padding-bottom: 15px;
+
+section.servicos details{
+    padding: 0;
+    background-color: white;
+    box-shadow: 2px 2px 10px  rgba(67, 67, 67, 0.077);
+    cursor: pointer;
+    margin-bottom: 20px;
 }
-.container-text.last p{
-    padding-bottom: 0;
+section.servicos details p{
+    font: 400 19px var(--Livvic);
+    line-height: 1.5em;
+    padding: 8px 18px;
+}
+.fa-solid.fa-chevron-up{
+    font-size: 12px;
+    color: var(--cinza-escuro);
+}
+section.servicos details[open] summary .fa-solid.fa-chevron-up{
+    transform: rotate(180deg);
 }
 
 
@@ -790,6 +847,7 @@ details {
     margin: 20px 5vw 60px;
     font: bolder 27px var(--Roboto);
     color: var(--índigo_blue);
+    line-height: 1.5em;
 }
 
 .summary_faq {
@@ -804,15 +862,20 @@ details {
 
 
 
+
 details summary {
     font: normal 18px var(--Roboto);
     color: var(--cinza);
 }
+details[open] summary .fa-plus {
+    transform: rotate(45deg);
+}
 
-details i {
+
+.summary_faq details i {
     margin-right: 20px;
     color: var(--cinza-medio);
-    transition: 1s ease;
+    transition: .5s ease;
 }
 
 details p {
@@ -897,7 +960,7 @@ details ol li p {
 }
 
 .rodape {
-    background-image: url(../img/footer.png);
+    background-color: var(--space);
     top: -200px;
     padding: 30px;
     align-items: center;
@@ -924,7 +987,6 @@ details ol li p {
 }
 
 .socials_fw ul a li i:hover {
-    transform: scale(1.03);
     color: var(--índigo_blue);
     background-color: white;
 }
