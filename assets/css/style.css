@@ -103,10 +103,10 @@ body {
     color: black;
     padding-block: 5px;
   }
-  nav a{
+  .nav-list a{
     position: relative;
   }
-  nav a::after{
+  .nav-list a::after{
     content: " ";
     width: 0%;
     height: 2px;
@@ -116,7 +116,7 @@ body {
     left: 0;
     transition: .5s ease-in-out;
   }
-  nav a:hover::after{
+  .nav-list a:hover::after{
     width: 100%;
 
   }
@@ -613,26 +613,30 @@ body {
 }
 
 .icon2::after {
-    content: "Suporte Especializado";
+    content: "Utilizamos exclusivamente peças originais em todas as nossas manutenções e reparos";
 }
 
 .icon3::after {
-    content: "Orçamento em Domicílio";
+    content: "Agende já sua visita e tenha a comodidade de receber um orçamento detalhado sem sair de casa.";
 }
 
 .icon4::after {
-    content: "Garantia de Qualidade";
+    content: "Conte conosco para um serviço confiável e duradouro!";
+}
+.icon5::after {
+    content: "Serviços especializados, garantindo seu funcionamento eficiente e prolongando sua vida útil.";
+}
+.icon6::after {
+    content: "Garantimos que seu eletrodoméstico seja reparado e devolvido a você dentro do prazo estabelecido.";
 }
 
 
-.icon1::after,
-.icon2::after,
-.icon3::after,
-.icon4::after {
+#icon::after {
     position: absolute;
     background-color: white;
-    width: 100%;
-    height: 100%;
+    padding: 20px;
+    width: 82%;
+    height: 238px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -645,10 +649,7 @@ body {
     font: 500 20px var(--Titillium);
 }
 
-.icon1:hover::after,
-.icon2:hover::after,
-.icon3:hover::after,
-.icon4:hover::after {
+#icon:hover::after {
     opacity: 1;
 }
 
@@ -686,6 +687,7 @@ body {
  .flex-container{
     width: 550px;
     margin: 10px 25px;
+    align-items: baseline;
 }
 .flex-container p{
     text-align: justify;
@@ -695,7 +697,7 @@ section.servicos details[open] summary, section.servicos details summary:hover {
     color: white;
 }
 section.servicos details summary{
-    padding: 15px 20px;
+    padding: 15px 30px;
     transition: .3s ease-in-out;
     display: flex;
     align-items: center;
@@ -713,26 +715,32 @@ section.servicos .fi.fi-rr-heat{
 section.servicos .fas.fa-tools{
     color: var(--prussian_blue);
 }
+section.servicos details summary .ttn{
+    transition: .3s ease-in-out;
+}
 section.servicos details[open] summary .ttn {
     color: white;   
 }
-section.servicos details summary:hover .ttn{
+section.servicos details summary:hover .ttn {
     color: white; 
 }
 section.servicos details summary h2 i{
     margin-right: 20px;
 }
 section.servicos details summary h2{
-    font: 600 17px var(--Livvic); 
+    font: 600 20px var(--Livvic);
 }
 
 
 section.servicos details{
     padding: 0;
     background-color: white;
-    box-shadow: 2px 2px 10px  rgba(67, 67, 67, 0.077);
+    box-shadow: 2px 2px 10px  rgba(67, 67, 67, 0.147);
     cursor: pointer;
-    margin-bottom: 20px;
+}
+
+section.servicos details:not(:last-child){
+    margin-bottom: 19px;
 }
 section.servicos details p{
     font: 400 19px var(--Livvic);
@@ -866,6 +874,7 @@ details {
 details summary {
     font: normal 18px var(--Roboto);
     color: var(--cinza);
+    align-items: center;
 }
 details[open] summary .fa-plus {
     transform: rotate(45deg);
@@ -941,15 +950,15 @@ details ol li p {
     }
 }
 
-.whatsapp {
+.whatsapp{
     position: fixed;
     z-index: 3;
     font-size: 40px;
     color: white;
-    top: 85%;
-    left: 92%;
-    filter: drop-shadow(0 0 10px #30ea653d);
-    transition: all .3s;
+    bottom: 20px;
+    right: 20px;
+    filter: drop-shadow(0 0 10px #00000013);
+    transition: opacity .3s ease-in-out;
 }
 
 .whatsapp i {
@@ -998,6 +1007,7 @@ details ol li p {
     gap: 25px;
     padding-top: 15px;
     align-items: center;
+    text-align: center;
 }
 
 .adicionais a h3 {
