@@ -19,6 +19,7 @@
 body {
     width: 100vw;
     overflow-x: hidden;
+    user-select: none;
 }
 
 :root {
@@ -391,57 +392,6 @@ body {
     z-index: 1;
 }
 
-.linha {
-    position: absolute;
-    top: 71%;
-    right: 26vw;
-    z-index: -1;
-    display: flex;
-    align-items: center;
-}
-
-.linha hr {
-    width: 30vw;
-    border-top: 5px solid white;
-    position: relative;
-}
-
-.linha span {
-    position: absolute;
-}
-
-
-.linha i {
-    color: white;
-}
-@media (max-width:720px){
-    nav{
-     top: 0;
-    }
-    
-    .banner1{
-     display: none;
-    }
-    .texto_sobreposto{
-     display: block; position: relative;
-     width: 100%; height:50vh;
-    }
-    .texto_sobreposto h1{
-     display:none;
-    }
-   .btn, .botao{
-     display: none;
-    }
-    .texto_sobreposto img{
-     width: 100%;
-     height: auto;
-     position: relative;
-     top: 0;
-     padding: 0;
-     top: 30px;
-    }
-   }
-
 /* ======================= Fim Carrossel Banner ======================== */
 
 .Nossos_compromissos {
@@ -452,26 +402,8 @@ body {
  nav{
   top: 0;
  }
- 
- .banner1{
-  display: none;
- }
- .texto_sobreposto{
-  display: block; position: relative;
-  width: 100%; height:50vh;
- }
- .texto_sobreposto h1{
-  display:none;
- }
-.btn, .botao{
-  display: none;
- }
  .texto_sobreposto img{
-  width: 100%;
-  height: auto;
-  position: relative;
-  top: 0;
-  padding: 0;
+  display: none;
  }
  .proposito{
   flex: collumn;
