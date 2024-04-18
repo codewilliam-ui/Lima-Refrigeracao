@@ -349,25 +349,8 @@ body {
     margin-left: 40px;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.259);
     line-height: 1.5em;    
-    animation-duration: 3s;
-    animation-name: slidein;
-    animation-direction: alternate;
     /* Espçamento do Parágrafo */
-}
-  
-  @keyframes slidein {
-    from {
-      margin-bottom: 100%;
-      width: 300%;
-    }
-  
-    to {
-        margin-bottom: 0%;
-      margin-left: 40px;
-      width: 100%;
-    }
-  }
-  
+} 
 
 .btn {
     padding: 10px 20px 10px 60px;
@@ -664,11 +647,15 @@ body {
     font: bolder 35px var(--Livvic);
     color: var(--índigo_blue);
     margin: 0 0 25px 0;
+    z-index: 2;
 }
 
 .servicos{
     height: auto;
     margin: 20px 0 50px 0;
+}
+.servicos-ctn{
+    z-index: 4;
 }
 
 .flex-servicos{
@@ -1036,4 +1023,13 @@ details ol li p {
     padding-top: 20px;
     color: white;
     font: normal 14px var(--Allura);
+}
+
+/* ================= SCROLL REVEAL =================*/
+.txt-topo-site, .img-topo-site, .btn, .fa-phone{
+    visibility: hidden;
+}
+
+.titulo-secao, .flex-intro, .img-servicos, .mySwiper{
+    visibility: hidden;
 }
