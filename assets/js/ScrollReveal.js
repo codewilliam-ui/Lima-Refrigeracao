@@ -27,8 +27,7 @@ ScrollReveal().reveal('.flex-intro',{
 });
 ScrollReveal().reveal('.servicos',{
     duration: 2000,
-    distance: '200px' ,
-    delay: 800,   
+    distance: '200px',   
 });
 
 
