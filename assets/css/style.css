@@ -242,7 +242,7 @@ body {
 .slide img {
     /* Sempre levar em consideração o tamanho original da imagem e da tela */
     height: 100%;
-    width: 100vw;
+    width: 100%;
 }
 
 .manual-navigation {
@@ -353,61 +353,31 @@ body {
     /* Espçamento do Parágrafo */
 } 
 
-.btn {
-    padding: 10px 20px 10px 60px;
-    border-radius: 25px;
-    /* Raio da borda do botão */
-    border-style: none;
-    /* Remover borda do botão */
-    background-color: var(--índigo_blue);
-    font: 300 18px var(--Roboto);
-    color: white;
-}
 
-.btn,
-.botao i {
-    position: absolute;
-    top: 65%;
-    margin-left: 40px;
-    font-size: 18px;
-    transition: all .7s;
-    /* Todas as transições do botão durará 7 segundos */
+
+.fa-phone{
+    margin-right: 20px;
 }
 
 .botao {
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.259);
+    position: absolute;
+    bottom: 25%;
+    margin-left: 40px;
+}
+.btn-first{
+    border: transparent;
+    padding: 10px 20px;
+    border-radius: 15px;
 }
 
-.btn:hover {
-    background-color: white;
-    color: var(--índigo_blue);
-}
-
-
-.botao i {
-    padding: 13px;
-    border-radius: 50% 0 50% 50%;
-    background-color: white;
-    color: var(--índigo_blue);
-    z-index: 1;
-}
 
 /* ======================= Fim Carrossel Banner ======================== */
 
 .Nossos_compromissos {
     position: relative;
     height: 550px;
-}
-@media (max-width:720px){
- nav{
-  top: 0;
- }
- .texto_sobreposto img{
-  display: none;
- }
- .proposito{
-  flex: collumn;
- }
+    width: 100vw;
+    justify-content: center;
 }
 
 
@@ -462,8 +432,34 @@ body {
 }
 
 @media (max-width: 767px){
+    .nav{
+        justify-content: space-around;
+    }
+    .logo img {    
+        margin: 0;
+      }
+    .slide img{
+        width: 100vw;
+        overflow: hidden;
+        object-fit: cover; object-position: -350px 0px;
+    }
+    .texto_sobreposto img{
+        display: none;
+    }
+    .texto_sobreposto h1{ 
+        width: 100%;  
+        margin: 40px;     
+        font-size: 30px;
+    }
     .flex-intro{
         flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .intro_compromissos .flex-intro h1{
+        width: 100vw;
+        text-align: center;
+        margin: 35px 10px;
     }
     .swiper {
         width: 100%;
@@ -473,9 +469,21 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
     }
+    section h1.titulo-secao, .container-wrapper h1.titulo-secao{
+        font-size: 30px;
+    }
+    .module.parallax span{
+        letter-spacing: .280em;
+        margin-bottom: 30px;
+    }
+    .module.parallax h1.titulo-secao{
+        text-align: center;
+        margin: 0 10px;
+    }
 
 }
 .intro_compromissos h1 {
+    width: 700px;
     color: white;
     font: 700 40px var(--Titillium);
 }
@@ -484,11 +492,16 @@ body {
 .intro_compromissos button {
     padding: 15px 35px;
     background-color: white;
-    color: var(--sapphire_blue);
-    border-style: none;
+    color: var(--space);
+    border: transparent;
     border-radius: 3px;
-    margin: 20px 0;
-    font: 700 17px var(--Titillium);
+    font: 500 17px var(--Poppins);
+    transition: .5s ease-in-out;
+}
+.intro_compromissos button:hover{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
 }
 
 
@@ -958,10 +971,6 @@ details ol li p {
 }
 
 /* ================= SCROLL REVEAL =================*/
-.txt-topo-site, .img-topo-site, .btn, .fa-phone{
-    visibility: hidden;
-}
-
-.titulo-secao, .flex-intro, .img-servicos, .mySwiper{
+.txt-topo-site, .img-topo-site, .flex-intro, .swiper-wrapper, .servicos{
     visibility: hidden;
 }

@@ -10,44 +10,25 @@ ScrollReveal().reveal('.txt-topo-site',{
     duration: 2000,
     distance: '90px'    
 });
-ScrollReveal().reveal('.btn',{
-    duration: 2000,
-    distance: '190px',    
-});
-ScrollReveal().reveal('.fa-phone',{
-    duration: 2000,
-    distance: '190px',    
-});
+
 
 /* Swiper */
-ScrollReveal().reveal('.mySwiper',{
+ScrollReveal().reveal('.swiper-wrapper',{
+    origin: "bottom",
     duration: 2000,
-    distance: '90px',
-    delay: 500,
-    rotate: {
-        x: -100,
-    },
+    distance: '200px',
+
 });
 /* Nossos compromissos */
 ScrollReveal().reveal('.flex-intro',{
+    origin: "bottom",
     duration: 2000,
-    distance: '90px'    
+    distance: '200px'    
 });
-ScrollReveal().reveal('.img-servicos',{
+ScrollReveal().reveal('.servicos',{
     duration: 2000,
-    distance: '90px',
-    delay: 500,
-    rotate: {
-        x: 0,
-        y: 0,
-        z: 10
-    } 
-});
-
-/* Títulos das Seções */
-ScrollReveal().reveal('.titulo-secao',{
-    duration: 2000,
-    distance: '90px'    
+    distance: '200px' ,
+    delay: 800,   
 });
 
 
