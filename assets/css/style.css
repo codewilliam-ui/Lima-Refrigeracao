@@ -477,6 +477,7 @@ body {
         margin-bottom: 30px;
     }
     .module.parallax h1.titulo-secao{
+        width: auto;
         text-align: center;
         margin: 0 10px;
     }
@@ -705,6 +706,7 @@ section.module span{
     z-index: 2;
 }
 section.module h1{
+    width: 700px;
     font: 700 40px var(--Titillium);
     color: white;
     z-index: 2;
