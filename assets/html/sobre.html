@@ -18,6 +18,11 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+
+    <!-- CSS do cabeçalho e rodapé-->
+    <link rel="stylesheet" href="../css/HeaderFooter.css">
+    <!-- FIm CSS -->
+
     <!-- Demo styles -->
 
     <link rel="stylesheet" href="../css/sobre.css">
@@ -25,54 +30,74 @@
 </head>
 
 <body>
-    <section class="objetivo_empresarial" id="sobre"> <!-- Propósitos da empresa (missão, visão e valores) -->
-        <div class="sobre_nos">
-            <h1>Quem somos nós?</h1>
-            <p>Somos uma equipe dedicada de profissionais apaixonados pelo que fazem. <br> Com vasta experiência no
-                setor de refrigeração, estamos comprometidos em fornecer os melhores serviços de manutenção para uma
-                variedade de eletrodomésticos, incluindo máquinas de lavar roupa, micro-ondas, tanquinhos,
-                ar-condicionados, geladeiras e freezers. Nosso objetivo é garantir o funcionamento eficiente e duradouro
-                de seus aparelhos domésticos, proporcionando-lhe tranquilidade e conforto em sua casa.
-            </p>
-        </div>
-        <div class="proposito">
-            <div class="missao">
-                <div class="titulo">
-                    <span class="icon_proposito"><i class="fa-solid fa-bullseye"></i></span>
-                    <h2>Missão</h2>
+    
+    <header class="header" id="header">
+        <nav class="nav">
+            <a href="../../index.html" class="logo"><img src="../img/LogoLM.svg" alt="Logotipo"></a>
+            <button class="hamburger"></button>
+            <ul class="nav-list">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="sobre-nos">
+            <div class="banner-sobre-nos">
+                <img src="../img/banner sobre nós.png" alt="Banner Sobre nós">
+                <div class="overlay">
+                    <div class="texto-sobreposto">
+                        <h1 class="titulo-sobreposto">Sobre a Lima Refrigeração</h1>
+                        <p class="pgf-sobreposto">Bem-vindo à Lima Refrigeração! Somos especialistas em instalação, manutenção e conserto de refrigeradores. Nossa equipe experiente está aqui para garantir que seus aparelhos funcionem perfeitamente. Conte conosco para soluções confiáveis e de qualidade superior.</p>
+                    </div>
                 </div>
-                <p>Nosso propósito é garantir o conforto e o bem-estar dos nossos clientes, oferecendo soluções de
-                    refrigeração eficientes, confiáveis e personalizadas para cada necessidade, contribuindo assim para
-                    ambientes mais agradáveis e saudáveis.</p>
+            </div>
+        </section>
+
+        <section class="compromissos">
+            <div class="missao">
+                <div class="banner-missao">
+                    <img src="../img/missão.png" alt="Missão">
+                </div>
+                <div class="texto-missao">
+                    <h1 class="titulo-missao">Missão</h1>
+                    <p class="pgf-missao">Oferecer serviços de instalação, manutenção e conserto de refrigeradores com excelência, proporcionando soluções eficazes para nossos clientes, garantindo sua satisfação e bem-estar. Nosso compromisso é ir além das expectativas, priorizando a qualidade, confiabilidade e segurança em cada interação, consolidando assim uma relação de confiança e parceria de longo prazo com nossa comunidade.</p>
+                </div>
             </div>
 
             <div class="visao">
-                <div class="titulo">
-                    <span class="icon_proposito"><i class="fa-regular fa-eye"></i></span>
-                    <h2>Visão</h2>
+                <div class="banner-visao">
+                    <img src="../img/visão.png" alt="Visão">
                 </div>
-                <p>Buscamos ser reconhecidos como referência em excelência e inovação no mercado de refrigeração,
-                    destacando-nos pelo compromisso com a qualidade, a satisfação do cliente e a sustentabilidade,
-                    mantendo sempre o foco na melhoria contínua e na expansão dos nossos serviços.</p>
+                <div class="texto-visao">
+                    <h1 class="titulo-visao">Visão</h1>
+                    <p class="pgf-visao">Nosso objetivo é ser a referência local, proporcionando soluções confiáveis e eficazes para nossos clientes, sempre buscando superar suas expectativas e garantir sua satisfação.</p>
+                </div>
             </div>
 
             <div class="valores">
-                <div class="titulo">
-                    <span class="icon_proposito"> <i class="fa-regular fa-handshake"></i></span>
-                    <h2>Valores</h2>
+                <div class="banner-valores">
+                    <img src="../img/valores.png" alt="Valores">
                 </div>
-
-                <p>Qualidade: Comprometemo-nos a oferecer produtos e serviços de alta qualidade, pautados pela
-                    excelência em cada detalhe e pela busca constante da satisfação do cliente.
-                <p>Confiança: Construímos relações de confiança e transparência com nossos clientes, colaboradores e
-                    parceiros, agindo com integridade, ética e respeito em todas as nossas interações.</p>
-                </p>
+                <div class="texto-valores">
+                    <h1 class="titulo-valores">Valores</h1>
+                    <p class="pgf-valores">Compromisso com a qualidade: Realizar cada trabalho com dedicação e precisão, assegurando a qualidade em cada detalhe. </p>
+                         <p class="pgf-valores">Ética e transparência: Agir sempre com integridade, honestidade e transparência em todas as nossas relações e negócios. </p>
+                        <p class="pgf-valores">Foco no cliente: Colocar as necessidades e expectativas dos clientes em primeiro lugar, buscando sempre superar suas expectativas.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+
+
+
+
     <section class="carrossel">
         <div class="nossas-avaliacoes">
-            <h2>Nossas Avaliações</h2>
+            <h1 class="titulo-avaliacoes">Veja o que nossos clientes falam sobre nós</h1>
+            <p class="pgf-avaliacoes">Quem escolhe a Lima Refrigeração não se arrepende! Confira o depoimento de alguns de nossos clientes.</p>
         </div>
         <!-- Swiper -->
         <div class="swiper mySwiper">
@@ -137,8 +162,8 @@
                             </div>
                         </div>
                         <div class="avaliacao"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></div>
                         <p>trabalho de garantia, o melhor do entorno!!</p>
                     </div>
                 </div>
@@ -170,8 +195,8 @@
                             </div>
                         </div>
                         <div class="avaliacao"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></div>
                         <p>Excelente trabalho e um ótimo atendimento!</p>
                     </div>
                 </div>
@@ -203,8 +228,8 @@
                             </div>
                         </div>
                         <div class="avaliacao"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></div>
                         <p>Ótima comunicação</p>
                     </div>
                 </div>
@@ -236,8 +261,8 @@
                             </div>
                         </div>
                         <div class="avaliacao"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></div>
                         <p>Atendimento de primeira, pode confiar, profissionais capacitados.</p>
                     </div>
                 </div>
@@ -269,8 +294,8 @@
                             </div>
                         </div>
                         <div class="avaliacao"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></div>
                         <p>Tem um bom atendimento, resolveu meu problema!</p>
                     </div>
                 </div>
@@ -302,8 +327,8 @@
                             </div>
                         </div>
                         <div class="avaliacao"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></div>
                         <p>Otima</p>
                     </div>
                 </div>
@@ -312,7 +337,87 @@
             <div class="swiper-button-prev swiper-navBtn"></div>
             <div class="swiper-pagination"></div>
         </div>
-    </section>
+    </section> 
+
+    <div class="container">
+        <section class="logos">
+            <ul>
+                <li><img src="../../assets/img/samsung.png" alt="Samsung"></li>
+                <li><img src="../../assets/img/carrier.png" alt="Carrier"></li>
+                <li><img src="../../assets/img/gree.png" alt="Gree"></li>
+                <li><img src="../../assets/img/electrolux.png" alt="Electrolux"></li>
+                <li><img src="../../assets/img/consul.png" alt="Consul"></li>
+                <li><img src="../../assets/img/fujitsu.png" alt="Fujitsu"></li>
+                <li><img src="../../assets/img/lg.png" alt="LG"></li>
+                <li><img src="../../assets/img/Brastemp.png" alt="Brastemp"></li>
+                <li><img src="../../assets/img/philco.png" alt="Philco"></li>
+                <li><img src="../../assets/img/elgin.png" alt="Elgin"></li>
+
+                <li><img src="../../assets/img/samsung.png" alt="Samsung"></li>
+                <li><img src="../../assets/img/carrier.png" alt="Carrier"></li>
+                <li><img src="../../assets/img/gree.png" alt="Gree"></li>
+                <li><img src="../../assets/img/electrolux.png" alt="Electrolux"></li>
+                <li><img src="../../assets/img/consul.png" alt="Consul"></li>
+                <li><img src="../../assets/img/fujitsu.png" alt="Fujitsu"></li>
+                <li><img src="../../assets/img/lg.png" alt="LG"></li>
+                <li><img src="../../assets/img/Brastemp.png" alt="Brastemp"></li>
+                <li><img src="../../assets/img/philco.png" alt="Philco"></li>
+                <li><img src="../../assets/img/elgin.png" alt="Elgin"></li><li><img src="../../assets/img/samsung.png" alt="Samsung"></li>
+                <li><img src="../../assets/img/carrier.png" alt="Carrier"></li>
+                <li><img src="../../assets/img/gree.png" alt="Gree"></li>
+                <li><img src="../../assets/img/electrolux.png" alt="Electrolux"></li>
+                <li><img src="../../assets/img/consul.png" alt="Consul"></li>
+                <li><img src="../../assets/img/fujitsu.png" alt="Fujitsu"></li>
+                <li><img src="../../assets/img/lg.png" alt="LG"></li>
+                <li><img src="../../assets/img/Brastemp.png" alt="Brastemp"></li>
+                <li><img src="../../assets/img/philco.png" alt="Philco"></li>
+                <li><img src="../../assets/img/elgin.png" alt="Elgin"></li>
+
+            </ul>
+        </section>
+    </div>
+    
+    <footer class="rodape">
+        <div class="socials_fw">
+            <ul>
+                <a href="">
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                </a>
+            </ul>
+            <ul>
+                <a href="">
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                </a>
+            </ul>
+            <ul>
+                <a href="">
+                    <li><i class="fa-brands fa-github"></i></li>
+                </a>
+            </ul>
+        </div>
+
+        <div class="adicionais">
+            <a href="">
+                <h3>Terms of Use</h3>
+            </a>
+            <span></span>
+            <a href="">
+                <h3>Support</h3>
+            </a>
+            <span></span>
+            <a href="">
+                <h3>Privacy Policy</h3>
+            </a>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2024 Designer by Franklin William</p>
+        </div>
+    </footer>
+
+    </main>
+
+    <script src="../js/app.js"></script>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -324,9 +429,9 @@
             spaceBetween: 30,
             loop: true,
             grabCursor: 'true',
-            centeredSlides: true,
+            centeredSlides: false,
             autoplay: {
-                delay: 2500,
+                delay: 3000,
                 disableOnInteraction: false,
             },
             pagination: {

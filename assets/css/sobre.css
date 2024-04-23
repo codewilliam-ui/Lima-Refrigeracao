@@ -3,14 +3,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Rubik+Scribble&display=swap');
 @import url('https://fonts.googleapis.com/css2? family= Allura & family= Aref+Ruqaa+Ink:wght@400;700 & family= Cookie & family= Roboto:wght@300; 400;700 & display=swap');
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,900);
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Livvic:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,900,900italic);
 
 *{
-    margin: 0; padding: 0; text-decoration: none; list-style: none; font-family: var(--Roboto); line-height: 1.5em;
+    margin: 0; padding: 0; text-decoration: none; list-style: none;
 }
 body{
-    width: 100%;
+    width: 100vw;    
+    overflow-x: hidden;
+    user-select: none;
 }
-:root{
+:root {
     /* Variáveis da cor azul */
     --azure: #E8F1F3;
     --carolina_blue: #1C9CD7;
@@ -22,21 +27,22 @@ body{
 
     /* Variável da cor vermelha */
     --medium_red: #A20202;
+    --tomate: #FF814D;
 
     /* Variáveis da cor verde */
     --verde-azulado: #009a9f;
-    --verde:#30EA66;
+    --verde: #30EA66;
 
     --amarelo: #FCBF02;
     --cinza-clarinho: #F8F8F8;
     --azul-claro: #6E93f7;
     --azul-claro2: #4070F4;
-
+    --winter: #A1E1F6;
 
 
     /* Variável da cor cinza */
     --cinza: #424242;
-    --cinza-claro:#F2F2F2;
+    --cinza-claro: #F2F2F2;
     --cinza-medio: #A9A9A9;
     --cinza-dark: #333333;
     --cinza-escuro: #171717;
@@ -46,12 +52,173 @@ body{
     --Allura: 'Allura', sans-serif;
     --Rubik: 'Rubik Scribble';
     --Kalam: 'Kalam';
+    --Titillium: 'Titillium Web';
+    --Poppins: 'Poppins';
+    --Livvic: 'Livvic';
 }
+/* ============================================ BANNER SOBRE NÓS ======================================== */
+section.sobre-nos .banner-sobre-nos{    
+    position: relative;
+}
+section.sobre-nos .banner-sobre-nos img{
+    width: 100vw;
+    height: 80vh;
+}
+section.sobre-nos .overlay{
+    width: 100vw;
+    height: 80vh;
+    background-color: rgba(51,51,51,.6);
+    position: absolute;
+    top: -49.7%;
+    left: -50%;
+    transform: translate(50%, 50%);
+    justify-content: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+section.sobre-nos .texto-sobreposto{
+    position: absolute;
+    color: white;
+    max-width: 33.8541666667vw;
+    left: 5vw;
+    text-align: left;
+}
+.titulo-sobreposto{
+    font: 700 2.7083333333vw var(--Roboto);
+    letter-spacing: .06vw;
+}
+
+.pgf-sobreposto{
+    font: 300 1.1458333333vw var(--Poppins);
+    line-height: 1.7;
+    margin-top: 1.5625vw;
+}   
+
+@media (max-width: 767px){
+    section .banner-sobre-nos img{
+        width: auto; 
+        overflow: hidden;        
+        object-fit: cover; object-position: -100px 0px;
+    }
+    section.sobre-nos .texto-sobreposto{
+        left: 50%;
+        transform: translate(-50%);
+        max-width: 100vw;
+    }
+    .titulo-sobreposto{
+        font: 700 35px var(--Roboto);
+        white-space: nowrap;
+    }
+    .pgf-sobreposto{
+        font: 300 14px var(--Poppins);
+        line-height: 1.7;
+        margin-top: 20px;
+    }  
+    
+    .banner-visao{
+        display: none;
+    }
+    .texto-missao, .texto-valores{
+        margin-left: 0;
+    }
+    .visao{
+        background-size: 100% 100%;
+    }
+    
+}
+/* ============================================ FIM BANNER ======================================== */
+
+/* ============================================ SEÇÃO COMPROMISSOS ======================================== */
+
+section.compromissos{
+    margin: 0;
+    justify-content: space-between;
+}
+
+.missao, .visao, .valores{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5vw;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.visao{
+    flex-direction: row-reverse;
+    background-image: url(../img/background.png) ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    gap: 40px;
+    padding: 40px 20px;
+}
+.banner-missao, .banner-visao, .banner-valores{
+    max-width: 600px;
+    width: auto;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 0 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.222);
+}
+.banner-missao img, .banner-valores img{
+    max-width: 600px;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease-in-out;
+    filter: brightness(60%);
+}
+.banner-visao img{
+    max-width: 600px;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease-in-out;
+    filter: brightness(90%);
+}
+.banner-missao:hover img, .banner-visao img:hover, .banner-valores img:hover {
+    transform: scale(1.03);
+    overflow: hidden;    
+    filter: brightness(65%);
+}
+
+.texto-missao, .texto-valores{
+    width: 750px;
+}
+.texto-visao{
+    width: 750px;
+}
+.titulo-missao, .titulo-visao, .titulo-valores, .titulo-avaliacoes{
+    font: 700 40px var(--Roboto); text-align: center;
+}
+.titulo-visao{color: white;
+}
+.pgf-visao{
+    color: white;
+}
+.pgf-missao, .pgf-visao, .pgf-valores{
+    font: 300 19px var(--Roboto);
+    margin-top: 2vw;
+    line-height: 1.7em;
+    text-align: justify;
+    text-indent: 1.25em;
+    word-break: keep-all;
+}
+.nossas-avaliacoes{
+    padding: 20px;
+}
+.pgf-avaliacoes{
+    font: 300 19px var(--Roboto);
+    margin-top: 1vw;
+    line-height: 1.7em;
+    text-align: center;
+    text-indent: 1.25em;
+}
+
 
 /* ============================================ CARROSSEL ======================================== */
 .carrossel{
-    height: 100vh;
+    height: auto;
     width: 100%;
+    margin-bottom: 4vw;
 }
 
 .swiper {
@@ -253,70 +420,3 @@ body{
 
 }
   /* ============================================ FIM CARROSSEL ======================================== */
-
-
-.sobre_nos{
-    text-align: center;
-    margin: 30px 70px;
-}
-
-.sobre_nos p{
-    padding-top: 20px;
-    width: 800px; line-height: 1.5em;
-    margin: 0 auto;
-}
-
-.sobre_nos h1{    
-    font: bolder 27px var(--Roboto);
-    color: var(--índigo_blue);
-    margin: 40px 0 30px 0;
-}
-
-.proposito{
-    display: flex;
-    gap: 40px; /* Espaçamento entre divs flexíveis */
-    margin: 70px;
-    text-align: justify;
-}
-
-.missao, .visao, .valores{
-    background-color: white ;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.086); border-radius: 25px;
-    padding: 30px; transition: all .5s; 
-    width: 30%;
-}
-
-.missao:hover, .visao:hover, .valores:hover {
-    transform: scale(1.03); /* Ao passar o mouse a div terá uma escala maior */
-}
-
-.icon_proposito i{
-    font-size: 50px; margin-right: 20px;
-}
-
-.missao .icon_proposito i{
-    color: var(--medium_red);
-}
-
-.visao .icon_proposito i{
-    color: var(--sapphire_blue);
-}
-
-.valores .icon_proposito i{
-    color: var(--verde-azulado);
-}
-
-.titulo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.titulo h2{
-    font: 500 20px var(--Roboto);
-}
-
-p{
-    text-indent: 1.2em; font: lighter 18px var(--Allura); line-height: 1.5em;
-}
