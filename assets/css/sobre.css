@@ -86,7 +86,7 @@ section.sobre-nos .texto-sobreposto{
 }
 .titulo-sobreposto{
     font: 700 2.7083333333vw var(--Roboto);
-    letter-spacing: .06vw;
+    letter-spacing: .06vw; 
 }
 
 .pgf-sobreposto{

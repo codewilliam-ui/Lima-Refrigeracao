@@ -97,8 +97,9 @@ body {
   }
   
   .nav-list a {
+    font-family: var(--Livvic);
     font-size: 18px;
-    color: black;
+    color: var(--cinza-escuro);
     padding-block: 5px;
   }
   .nav-list a{
@@ -107,9 +108,9 @@ body {
   .nav-list a::after{
     content: " ";
     width: 0%;
-    height: 2px;
+    height: 1px;
     position: absolute;
-    background-color: var(--space);
+    background-color: var(--verde-azulado);
     bottom: 0;
     left: 0;
     transition: .5s ease-in-out;
@@ -125,7 +126,7 @@ body {
     display: none;
     border: none;
     background: none;
-    border-top: 3px solid black;
+    border-top: 3px solid var(--space);
     cursor: pointer;
   }
   
@@ -135,7 +136,7 @@ body {
     display: block;
     width: 30px;
     height: 3px;
-    background: black;
+    background: var(--space);
     margin-top: 5px;
     position: relative;
     transition: 0.3s;
@@ -194,7 +195,7 @@ body {
     .nav.active .hamburger {
       position: fixed;
       top: 26px;
-      right: 16px;
+      right: 30px;
       border-top-color: transparent;
     }
   
