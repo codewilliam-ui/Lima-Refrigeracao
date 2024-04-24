@@ -102,20 +102,28 @@ section.sobre-nos .texto-sobreposto{
         object-fit: cover; object-position: -100px 0px;
     }
     section.sobre-nos .texto-sobreposto{
-        left: 40%;
+        left: 50%;
         transform: translate(-50%);
-        max-width: 100vw;
+        max-width: 100vw; width: 80vw;
+    }
+    .missao .banner-missao, .valores .banner-valores{
+        border-radius: 0 0;
+        width: 100%;
+        height: auto;
     }
     .titulo-sobreposto{
-        font: 700 35px var(--Roboto);
+        font: 700 30px var(--Roboto); line-height: 1.5em;
     }
     .pgf-sobreposto{
-        font: 300 14px var(--Poppins);
+        font: 300 16px var(--Poppins);
         line-height: 1.7;
         margin-top: 20px;
     } 
     .texto-missao, .texto-valores{
         margin-left: 0;
+    }
+    h1.titulo-missao, h1.titulo-visao, h1.titulo-valores, h1.titulo-avaliacoes{
+        font:700 30px var(--Roboto);
     }
     
     
@@ -137,7 +145,7 @@ section.compromissos{
     align-items: center;
     gap: 40px;
 }
-.container-parallax{
+.texto-visao{
     padding: 0 20px;
 }
 .valores{
@@ -169,7 +177,7 @@ section.compromissos{
 }
 
 .titulo-missao, .titulo-visao, .titulo-valores, .titulo-avaliacoes{
-    font: 700 40px var(--Roboto); text-align: center; z-index: 4;
+    font: 700 35px var(--Roboto); text-align: center; z-index: 4;
 }
 .titulo-visao, .pgf-visao{color: white;
 }
@@ -187,7 +195,7 @@ section.compromissos{
     padding: 20px;
 }
 .pgf-avaliacoes{
-    font: 300 19px var(--Roboto);
+    font: 300 16px var(--Roboto);
     margin-top: 1vw;
     line-height: 1.7em;
     text-align: center;
@@ -204,15 +212,12 @@ section.compromissos{
 
 .container-parallax{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
     height: 70vh ;
     width: 100%;
     position: relative;
     overflow: hidden;
     justify-content: center;
     align-items: center;
-    gap: 40px;
     background-position: 50% 50% ;
     background-repeat: no-repeat;
     background-attachment: fixed; /* cria o efeito parallax */
