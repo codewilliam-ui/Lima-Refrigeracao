@@ -28,6 +28,7 @@ body{
 
     /* Variável da cor vermelha */
     --medium_red: #A20202;
+    --vermelho: #ff0000;
     --tomate: #FF814D;
 
     /* Variáveis da cor verde */
@@ -114,48 +115,141 @@ body{
     gap: 60px;
     align-items: center;
     position: relative;
-    background-color: var(--cinza-claro);
+    margin: 4vw 0;
+}
+.formulario{
+    width: 600px; padding: 30px;
+    border: 1px solid var(--sapphire_blue);
 }
 form{
-    width: auto; height: auto; padding: 20px; position: relative;
+    width: 100%;
+    height: auto; position: relative;
     border-radius: 1em;
-    margin: 4vh 0;
-    background-color: white; 
 }   
 .formulario-titulo{
     text-align: center;
 }
 .formulario-titulo h2{
-    font: 400 30px var(--Roboto); color: var(--space); 
+    font: 400 30px var(--Roboto); color: var(--space); margin-bottom: 20px;
 }
+.formulario-titulo p{
+    font: 300 15px var(--Roboto);
+}
+
+hr{
+    margin: 20px 0; border: 0; height: 1px; border-top: 1px solid var(--cinza-medio);
+}
+.info.main{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "first second"
+                         "third fourth"
+                         "fifth fifth";
+    grid-gap: 20px;
+}
+.flex-info.first{
+    grid-area: first;
+}
+.flex-info.second{
+    grid-area: second;
+}
+.flex-info.third{
+    grid-area: third;
+}
+.flex-info.fourth{
+    grid-area: fourth;
+}
+.flex-info.fifth{
+    grid-area: fifth;
+}
+select{
+    width: ;
+}
+
+@media screen and (max-width: 600px) {
+    .formulario {
+        width: 100%;
+    }
+    .info.main {
+        grid-template-columns: 1fr;
+        grid-template-areas: "first"
+                             "second"
+                             "third"
+                             "fourth"
+                             "fifth";
+    }
+    .flex-info {
+        width: 100%;
+    }
+    .localizacao iframe{
+        width: 100vw;
+    }
+}
+
 
 label{
     display: block;
-    width: 200px;
     text-align: left;
-    margin-top: 20px; 
+    font: 400 13px var(--Roboto);
+}
+label span{
+    color: var(--vermelho);
 }
 
-input, textarea{
-    font: 300 16px var(--Roboto);
-    padding: 10px;
-    margin-top: 10px;
-    width: 95%;
-    background-color: transparent;
-    border-bottom: 1px solid var(--cinza)!important;
-    border: none;
+select, input{
+    width: 100%;
+}
+select option{
+    font: 300 14px var(--Roboto);
+}
+select{
+    color: var(--space);
 }
 
+select, input, textarea{
+    font: 300 16px var(--Roboto);  
+    margin-top: 10px; padding: 5px 0;
+    background-color: var(--cinza-clarinho);
+    border: 1px solid var(--cinza-medio);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.127);
+}
 
 textarea{
     vertical-align: top; 
     /* Para permitir aos usuários redimensionarem qualquer textarea verticalmente. Ele não funciona em todos os browsers */
-    resize: vertical;
+    resize: vertical; width: 100%;
 }
 
-.button-submit{
-    text-align: center;
-    margin: 25px 0 5px 0;
-    
+input:focus, textarea:focus{
+    border: 0px; background-color: var(--cinza); color: white;
 }
+
+
+
+.button-submit-reset{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 20px 0;   
+    gap: 40px; 
+}
+.button-submit-reset .submit{
+    padding: 10px 25px; border: 1px solid transparent; background-color: var(--space); color: white; transition: .3s ease-in-out; font: 400 16px var(--Roboto);
+}
+
+.button-submit-reset .submit:hover{
+    border: 1px solid var(--space); color: var(--space); background-color: transparent;
+}
+
+
+iframe{
+    width: 450px;
+    height: 300px;
+}
+
+
+
 

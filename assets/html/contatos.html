@@ -64,24 +64,70 @@
                 <form action="https://api.staticforms.xyz/submit" method="post">
                     <div class="formulario-titulo">
                         <h2>Entre em contato</h2>
-                        <p>Preencha o formulário abaixo e entraremos em contato co você</p>
+                        <p>Para tirar dúvidas, nos dar sugestões, ou fazer reclamações, basta preencher os campos abaixo</p>
                     </div>
-                    <label for="nome">Nome</label>
-                    <input type="text" name="name" id="nome" placeholder="Digite seu nome" autocomplete="off" required>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="name" placeholder="Digite seu endereço de e-mail" required >
-                    <label for="telefone">Telefone</label>
-                    <input type="number" name="phone" id="tel" placeholder="(DDD) 99999-9999" required>
-                    <label for="mensagem">Mensagem</label>
-                    <textarea name="message" id="msg" cols="30" rows="3" required></textarea>
-                    <div class="button-submit"><button type="submit" value="submit">Enviar</button></div>
+                    <hr>
+                    <div class="info main">
+                        <div class="flex-info first">
+                            <label for="nome">Nome Completo <span>*</span></label>
+                            <input type="text" name="name" id="nome" required >
+                        </div>
+
+                        <div class="flex-info second">
+                            <label for="email">E-mail <span>*</span></label>
+                            <input type="email" name="email" id="email" required >
+                        </div>
+                        
+
+                        <div class="flex-info third">
+                            <label for="name-subject">Assunto</label>
+                            <select name="name-subject" id="subject">
+                                <option value="1">Dúvida</option>
+                                <option value="2">Sugestão</option>
+                                <option value="3">Reclamação</option>
+                            </select>
+                        </div>
+
+                        <div class="flex-info fourth">
+                            <label for="telefone">Telefone <span>*</span></label>
+                            <input type="number" name="phone" id="tel" placeholder="(DDD) 99999-9999" required>
+                        </div>
+
+                        <div class="flex-info fifth">
+                            <label for="mensagem">Digite sua Mensagem <span>*</span></label>
+                            <textarea name="message" id="msg" cols="30" rows="3" required></textarea>
+                        </div>
+                    </div>
+
+                    
+
+                    
+
+                    <div class="button-submit-reset"><button class="submit" type="submit" value="submit">Enviar</button>
+                    <button class="button-reset" type="reset" >Limpar Campos</button></div>
+
                     <input type="hidden" name="accessKey" value="793ac421-b849-4466-b593-3c6e40128d29">
                     <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/assets/html/agradecimento.html">
                 </form>
             </div>
 
-            <div class="localizacao">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3832.4942058639504!2d-47.950868924816774!3d-16.143444984546832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9359998d6bc0edf5%3A0x39b0453ee206c569!2zTCZNIFJlZnJpZ2VyYcOnw6Nv!5e0!3m2!1spt-BR!2sbr!4v1714021124335!5m2!1spt-BR!2sbr" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="flex-localizacao">
+                <div class="localizacao">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3832.4942058639504!2d-47.950868924816774!3d-16.143444984546832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9359998d6bc0edf5%3A0x39b0453ee206c569!2zTCZNIFJlZnJpZ2VyYcOnw6Nv!5e0!3m2!1spt-BR!2sbr!4v1714021124335!5m2!1spt-BR!2sbr"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+                </div>
+                <div class="contato-empresa">
+                    <span><i class="fa-solid fa-phone">LIGUE PARA NÓS</i></span>
+                    <p class="telefone">(61) 98449-1224</p>
+                </div>
+                <div class="local-empresa">
+                    <span><i class="fa-solid fa-location-dot">LOCALIZAÇÃO</i></span>
+                    <p class="endereco-empresa">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                </div>
+                <div class="horario-comercial">
+                    <span><i class="fa-solid fa-clock">HORÁRIO COMERCIAL</i></span>
+                    <p class="horario">Lorem ipsum dolor sit amet consectetur adipisicing </p>
+                </div>
+                
             </div>
         </section>
         
