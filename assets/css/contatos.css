@@ -30,6 +30,7 @@ body{
     --medium_red: #A20202;
     --vermelho: #ff0000;
     --tomate: #FF814D;
+    --laranja: #ff5900;
 
     /* Variáveis da cor verde */
     --verde-azulado: #009a9f;
@@ -165,13 +166,11 @@ hr{
 .flex-info.fifth{
     grid-area: fifth;
 }
-select{
-    width: ;
-}
+
 
 @media screen and (max-width: 600px) {
     .formulario {
-        width: 100%;
+        width: 100%; border: none;
     }
     .info.main {
         grid-template-columns: 1fr;
@@ -184,9 +183,7 @@ select{
     .flex-info {
         width: 100%;
     }
-    .localizacao iframe{
-        width: 100vw;
-    }
+    
 }
 
 
@@ -203,11 +200,14 @@ select, input{
     width: 100%;
 }
 select option{
-    font: 300 14px var(--Roboto);
+    font: 300 14px var(--Roboto); 
 }
 select{
-    color: var(--space);
+    color: var(--space); 
+    outline: x solid var(--cinza-medio);
 }
+
+
 
 select, input, textarea{
     font: 300 16px var(--Roboto);  
@@ -215,6 +215,7 @@ select, input, textarea{
     background-color: var(--cinza-clarinho);
     border: 1px solid var(--cinza-medio);
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.127);
+    text-indent: 1em;
 }
 
 textarea{
@@ -223,9 +224,15 @@ textarea{
     resize: vertical; width: 100%;
 }
 
-input:focus, textarea:focus{
-    border: 0px; background-color: var(--cinza); color: white;
+input:focus, textarea:focus{  color: rgb(0, 0, 0);
+    outline: x solid var(--cinza-medio);
+
 }
+
+input::placeholder{
+    color: var(--cinza-medio);
+}
+
 
 
 
@@ -234,22 +241,54 @@ input:focus, textarea:focus{
     text-align: center;
     justify-content: center;
     margin: 20px 0;   
-    gap: 40px; 
+    gap: 20px; 
 }
 .button-submit-reset .submit{
-    padding: 10px 25px; border: 1px solid transparent; background-color: var(--space); color: white; transition: .3s ease-in-out; font: 400 16px var(--Roboto);
+    padding: 10px 55px; border: 1px solid transparent; background-color: var(--space); color: white; transition: .3s ease-in-out; font: 400 16px var(--Roboto);
 }
 
 .button-submit-reset .submit:hover{
     border: 1px solid var(--space); color: var(--space); background-color: transparent;
 }
+.button-reset{
+    background-color: var(--laranja); padding: 10px 20px; border: 1px solid transparent; font: 400 16px var(--Roboto); color: white; transition: .3s ease-in-out;
+}
 
+.button-reset:hover{
+    color: var(--laranja); background-color: transparent;
+    border: 1px solid var(--laranja);
+}
+
+.flex-localizacao{
+    width: 500px;
+}
 
 iframe{
-    width: 450px;
+    width: 100%;
     height: 300px;
 }
 
+input[type=number]::-webkit-inner-spin-button { 
+    all: unset;  /* Remove as setas do input */
+}
+
+.informacao-empresa{
+    margin: 40px; text-decoration: none; 
+}
+
+.empresa i{
+    color: var(--laranja); margin-right: 10px;
+}
+.empresa span{
+    font: 600 17px var(--Poppins); color: var(--space);
+}
+
+.empresa p{
+    font: 300 18px var(--Roboto); margin-left: 25px; color: black;
+}
+.informacao-empresa div + div{
+    margin-top: 20px;
+}
 
 
 
