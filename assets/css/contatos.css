@@ -175,6 +175,9 @@ hr{
     .contato, .contato-parallax{
         height: 40vh;
     }
+    .contato-parallax{
+        background-position: 90% 50%
+    }
     .texto-contato h1{
         font-size: 35px;
     }
@@ -198,7 +201,9 @@ hr{
     .flex-localizacao .informacao-empresa{
         margin: 20px 40px;
     }
-    
+    .flex-localizacao iframe{
+        width: 100vw;
+    }
 }
 
 
