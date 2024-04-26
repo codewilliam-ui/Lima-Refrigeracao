@@ -114,13 +114,16 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     gap: 60px;
-    align-items: center;
     position: relative;
     margin: 4vw 0;
 }
 .formulario{
-    width: 600px; padding: 30px;
+    width: 500px;
+    padding: 30px;
     border: 1px solid var(--sapphire_blue);
+    height: 500px;
+    align-items: center;
+    display: flex;
 }
 form{
     width: 100%;
@@ -169,6 +172,15 @@ hr{
 
 
 @media screen and (max-width: 600px) {
+    .contato, .contato-parallax{
+        height: 40vh;
+    }
+    .texto-contato h1{
+        font-size: 35px;
+    }
+    .flex-formulario{
+        padding: 40px 0;
+    }
     .formulario {
         width: 100%; border: none;
     }
@@ -182,6 +194,9 @@ hr{
     }
     .flex-info {
         width: 100%;
+    }
+    .flex-localizacao .informacao-empresa{
+        margin: 20px 40px;
     }
     
 }
@@ -207,11 +222,10 @@ select{
     outline: x solid var(--cinza-medio);
 }
 
-
-
 select, input, textarea{
-    font: 300 16px var(--Roboto);  
-    margin-top: 10px; padding: 5px 0;
+    font: 300 14px var(--Roboto);  
+    text-align: justify;
+    margin-top: 5px; padding: 5px 0;
     background-color: var(--cinza-clarinho);
     border: 1px solid var(--cinza-medio);
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.127);
@@ -221,7 +235,7 @@ select, input, textarea{
 textarea{
     vertical-align: top; 
     /* Para permitir aos usuários redimensionarem qualquer textarea verticalmente. Ele não funciona em todos os browsers */
-    resize: vertical; width: 100%;
+    resize: none; width: 100%;
 }
 
 input:focus, textarea:focus{  color: rgb(0, 0, 0);
@@ -234,13 +248,11 @@ input::placeholder{
 }
 
 
-
-
 .button-submit-reset{
     display: flex;
     text-align: center;
     justify-content: center;
-    margin: 20px 0;   
+    margin-top: 30px;   
     gap: 20px; 
 }
 .button-submit-reset .submit{
@@ -260,11 +272,14 @@ input::placeholder{
 }
 
 .flex-localizacao{
-    width: 500px;
+    width: 500px; height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 iframe{
-    width: 100%;
+    width: 500px;
     height: 300px;
 }
 
@@ -273,18 +288,18 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .informacao-empresa{
-    margin: 40px; text-decoration: none; 
+    margin: 20px 0; text-decoration: none; 
 }
 
 .empresa i{
-    color: var(--laranja); margin-right: 10px;
+    color: var(--laranja); margin-right: 20px;
 }
 .empresa span{
-    font: 600 17px var(--Poppins); color: var(--space);
+    font: 500 17px var(--Roboto); color: var(--space);
 }
 
 .empresa p{
-    font: 300 18px var(--Roboto); margin-left: 25px; color: black;
+    font: 300 14px var(--Roboto); color: var(--space); margin-top: 10px; line-height: 1.5em;
 }
 .informacao-empresa div + div{
     margin-top: 20px;
