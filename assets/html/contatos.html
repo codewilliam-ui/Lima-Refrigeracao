@@ -34,6 +34,7 @@
     <title>Lima Refrigeração</title>
 </head>
 
+
 <body>
     
     <header class="header" id="header">
@@ -90,7 +91,8 @@
 
                         <div class="flex-info fourth">
                             <label for="telefone">Telefone <span>*</span></label>
-                            <input type="number" name="phone" id="tel" placeholder="(DDD) 99999-9999" required>
+                            <input type="tel" name="phone" id="telefone" placeholder="(DDD) 99999-9999" required maxlength="11" oninput="formatarTelefone(this)">
+
                         </div>
 
                         <div class="flex-info fifth">
@@ -183,4 +185,20 @@
     </footer>
 
     <script src="../js/app.js"></script>
+
+    <script>
+        function formatarTelefone(input) {
+  // Remove qualquer caractere que não seja número
+  var telefone = input.value.replace(/\D/g, '');
+
+  // Formatação do número de telefone
+  if (telefone.length === 11) {
+    input.value = '(' + telefone.substring(0, 2) + ') ' + telefone.substring(2, 7) + '-' + telefone.substring(7);
+  } else if (telefone.length === 10) {
+    input.value = '(' + telefone.substring(0, 2) + ') ' + telefone.substring(2, 6) + '-' + telefone.substring(6);
+  } else {
+    input.value = telefone;
+  }
+}
+    </script>
 </body>
