@@ -184,7 +184,7 @@ hr{
         padding: 40px 0;
     }
     .formulario {
-        width: 100%; border: none;
+        width: 100%; 
     }
     .info.main {
         grid-template-columns: 1fr;
@@ -233,18 +233,17 @@ select, input, textarea{
     background-color: var(--cinza-clarinho);
     border: 1px solid var(--cinza-medio);
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.127);
-    text-indent: 1em;
+    text-indent: 1em; line-height: 1.5em;
 }
 
 textarea{
     vertical-align: top; 
     /* Para permitir aos usuários redimensionarem qualquer textarea verticalmente. Ele não funciona em todos os browsers */
-    resize: none; width: 100%;
+    resize: none; width: 100%; text
 }
 
 input:focus, textarea:focus{  color: rgb(0, 0, 0);
-    outline: x solid var(--cinza-medio);
-
+    outline: 1px solid var(--cinza-medio);
 }
 
 input::placeholder{

@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="google-adsense-account" content="ca-pub-6136037866603899">
+
     <!-- Favicon do site -->
     <link rel="shortcut icon" href="../img/congelando.png" type="image/x-icon"
         href="https://www.flaticon.com/br/icones-gratis/congelar" title="congelar ícones">
@@ -32,6 +34,7 @@
 
     <link rel="stylesheet" href="../css/contatos.css">
     <title>Lima Refrigeração</title>
+
 </head>
 
 
@@ -63,6 +66,7 @@
             <div class="formulario">
                 
                 <form action="https://api.staticforms.xyz/submit" method="post">
+                    <input type="text" name="honeypot" style="display: none;">
                     <div class="formulario-titulo">
                         <h2>Entre em contato</h2>
                         <p>Para tirar dúvidas, nos dar sugestões, ou fazer reclamações, basta preencher os campos abaixo</p>
@@ -81,8 +85,8 @@
                         
 
                         <div class="flex-info third">
-                            <label for="name-subject">Assunto</label>
-                            <select name="name-subject" id="subject">
+                            <label for="$subject">Assunto</label>
+                            <select  type="text" name="$subject" id="subject">
                                 <option value="1">Dúvida</option>
                                 <option value="2">Sugestão</option>
                                 <option value="3">Reclamação</option>
