@@ -26,7 +26,6 @@ ScrollReveal().reveal('.servicos',{
 });
 
 
-/* Quem Somos */
 
 /* Topo do site */
 

@@ -246,8 +246,7 @@ textarea{
     resize: none; width: 100%; text
 }
 
-input:focus, textarea:focus{  
-    color: rgb(0, 0, 0);
+input:focus, textarea:focus{
     outline: 1px solid var(--cinza-medio);
 }
 
