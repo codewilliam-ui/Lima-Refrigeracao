@@ -184,7 +184,8 @@ hr{
         padding: 40px 0;
     }
     .formulario {
-        width: 100%; 
+        width: 100%; box-shadow: none;
+        margin-top: 40px;
     }
     .info.main {
         grid-template-columns: 1fr;
@@ -200,8 +201,11 @@ hr{
     .flex-localizacao .informacao-empresa{
         margin: 20px 40px;
     }
+    .flex-localizacao{
+        padding-top: 40px;
+    }
     .flex-localizacao iframe{
-        width: 100vw;
+        width: 100vw; padding-bottom: 20px;
     }
 }
 
@@ -242,7 +246,8 @@ textarea{
     resize: none; width: 100%; text
 }
 
-input:focus, textarea:focus{  color: rgb(0, 0, 0);
+input:focus, textarea:focus{  
+    color: rgb(0, 0, 0);
     outline: 1px solid var(--cinza-medio);
 }
 
