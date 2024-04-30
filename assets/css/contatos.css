@@ -312,5 +312,49 @@ input[type=number]::-webkit-inner-spin-button {
     margin-top: 20px;
 }
 
+/* ========================================== Formulário Enviado! ========================================= */
+section.formulario-enviado{
+    width: 100vw;
+    height: 50vh;
+    display: flex; align-items: center;
+}
+section.formulario-enviado .message{
+    margin: 0 auto; padding: 0 20px; display: flex; flex-wrap: wrap; 
+    align-items: center; 
+    justify-content: center; gap: 30px;
+}
+section.formulario-enviado .icone-enviado{
+    display: flex; justify-content: center;
+}
+section.formulario-enviado .message .icone-enviado i{
+    padding: 20px; font-size: 100px; color: var(--verde-azulado);
+    border: 1px solid transparent; border-radius: 50%; box-shadow: 0 0  20px rgba(68, 0, 255, 0.096);
+}
+section.formulario-enviado .texto-enviado{
+    text-align: center;
+}
+section.formulario-enviado .texto-enviado span{
+    font: 500 40px var(--Roboto); color: var(--verde-azulado);
+}
+section.formulario-enviado .texto-enviado .flex-prgf{
+    display: flex; flex-wrap: wrap; align-items: end; justify-content: center;
+}
+section.formulario-enviado .texto-enviado p{
+    font: 300 18px var(--Roboto); color: var(--cinza-medio);
+    padding-top: 15px;
+}
+section.formulario-enviado .texto-enviado .flex-prgf a{
+    text-decoration: none;
+}
+section.formulario-enviado .texto-enviado i.fa.fa-sign-out{
+     padding-left: 10px; font-size: 17px; color: var(--prussian_blue);
+}
 
-
+@media screen and (max-width: 600px){
+    section.formulario-enviado .texto-enviado span{
+        font-size: 30px;
+    }
+    section.formulario-enviado .texto-enviado i.fa.fa-sign-out{
+        padding: 25px 0 0 0; font-size: 22px;
+   }
+}

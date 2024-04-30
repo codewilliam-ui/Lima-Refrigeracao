@@ -97,9 +97,8 @@ body {
   }
   
   .nav-list a {
-    font-family: var(--Livvic);
-    font-size: 18px;
-    color: var(--cinza-escuro);
+    font: 300 18px var(--Roboto);
+    color: black;
     padding-block: 5px;
   }
   .nav-list a{
