@@ -122,7 +122,7 @@ section.politica{
     font: 400 23px var(--Roboto); color: var(--cinza-escuro);
 }
 .politica-privacidade p, .politica-privacidade ul{
-    font: 300 17px var(--Poppins); color: var(--cinza); text-align: justify;
+    font: 300 18px var(--Roboto); color: black; text-align: justify;
 }
 .politica-privacidade p a{
     text-decoration: underline; color: var(--sapphire_blue);

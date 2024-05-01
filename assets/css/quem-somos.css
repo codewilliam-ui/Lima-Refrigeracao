@@ -150,13 +150,12 @@ section.compromissos{
     color: white;
 }
 .pgf-missao, .pgf-visao, .pgf-valores{
-    font: 300 19px var(--Roboto);
+    font: 300 18px var(--Roboto);
     margin-top: 2vw;
     line-height: 1.7em;
     text-align: justify;
     text-indent: 1.25em;
-    word-break: keep-all;
-    
+    word-break: keep-all; 
 }
 
 /* --------------------------- PARALLAX VISÃO -------------------------- */
