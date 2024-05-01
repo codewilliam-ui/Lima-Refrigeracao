@@ -315,11 +315,11 @@ input[type=number]::-webkit-inner-spin-button {
 /* ========================================== Formulário Enviado! ========================================= */
 section.formulario-enviado{
     width: 100vw;
-    height: 50vh;
+    height: auto;
     display: flex; align-items: center;
 }
 section.formulario-enviado .message{
-    margin: 0 auto; padding: 0 20px; display: flex; flex-wrap: wrap; 
+    margin: 120px auto; padding: 0 20px; display: flex; flex-wrap: wrap; 
     align-items: center; 
     justify-content: center; gap: 30px;
 }
