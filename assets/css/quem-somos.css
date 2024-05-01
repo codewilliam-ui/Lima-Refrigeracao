@@ -111,7 +111,7 @@ section.compromissos{
 .missao, .valores{
     display: flex;
     flex-wrap: wrap;
-    padding: 5vw 20px;
+    margin: 5vw 25px;
     justify-content: center;
     align-items: center;
     gap: 40px;
@@ -141,7 +141,7 @@ section.compromissos{
     width: 750px;
 }
 .texto-visao{
-    padding: 0 20px;
+    padding: 0 25px;
 }
 .titulo-missao, .titulo-visao, .titulo-valores, .titulo-avaliacoes{
     font: 700 35px var(--Roboto); text-align: center; z-index: 4;
@@ -200,7 +200,7 @@ section.compromissos{
     margin-bottom: 4vw;
 }
 .nossas-avaliacoes{
-    padding: 20px;
+    margin: 20px 25px;
 }
 .pgf-avaliacoes{
     font: 300 16px var(--Roboto);
