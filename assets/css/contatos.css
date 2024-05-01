@@ -327,34 +327,29 @@ section.formulario-enviado .icone-enviado{
     display: flex; justify-content: center;
 }
 section.formulario-enviado .message .icone-enviado i{
-    padding: 20px; font-size: 100px; color: var(--verde-azulado);
+    padding: 20px; font-size: 100px; color: var(--space);
     border: 1px solid transparent; border-radius: 50%; box-shadow: 0 0  20px rgba(68, 0, 255, 0.096);
 }
 section.formulario-enviado .texto-enviado{
     text-align: center;
 }
 section.formulario-enviado .texto-enviado span{
-    font: 500 40px var(--Roboto); color: var(--verde-azulado);
-}
-section.formulario-enviado .texto-enviado .flex-prgf{
-    display: flex; flex-wrap: wrap; align-items: end; justify-content: center;
+    font: 500 40px var(--Roboto); color: var(--space);
 }
 section.formulario-enviado .texto-enviado p{
-    font: 300 18px var(--Roboto); color: var(--cinza-medio);
+    font: 300 18px var(--Roboto); color: var(--cinza-dark);
     padding-top: 15px;
 }
-section.formulario-enviado .texto-enviado .flex-prgf a{
-    text-decoration: none;
+section.formulario-enviado .texto-enviado button{
+    padding: 10px 50px; margin-top: 30px; background-color: var(--laranja); color: white; border: 1px solid transparent; font: 400 15px var(--Roboto);transition: .4s ease-in-out; cursor: pointer;
 }
-section.formulario-enviado .texto-enviado i.fa.fa-sign-out{
-     padding-left: 10px; font-size: 17px; color: var(--prussian_blue);
+section.formulario-enviado .texto-enviado a button:hover{
+    background-color: transparent; border: 1px solid var(--laranja); color: var(--laranja);
 }
+
 
 @media screen and (max-width: 600px){
     section.formulario-enviado .texto-enviado span{
         font-size: 30px;
     }
-    section.formulario-enviado .texto-enviado i.fa.fa-sign-out{
-        padding: 25px 0 0 0; font-size: 22px;
-   }
 }
