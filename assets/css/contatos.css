@@ -1,21 +1,33 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Rubik+Scribble&display=swap');
+/* ====================== FIM CONFIGURAÇÃO UNICODE ===================== */
+
+/* ========================= FONTES IMPORTADAS ========================= */
 @import url('https://fonts.googleapis.com/css2? family= Allura & family= Aref+Ruqaa+Ink:wght@400;700 & family= Cookie & family= Roboto:wght@300; 400;700 & display=swap');
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,900);
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
-@import url(https://fonts.googleapis.com/css?family=Livvic:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,900,900italic);
+/* ======================= FIM FONTES IMPORTADAS ======================= */
 
-*{
-    margin: 0; padding: 0; text-decoration: none; list-style: none;
+
+/* ======================= CONFIGURAÇÕES GLOBAIS ======================= */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    line-height: 1.5em;
 }
-body{
-    width: 100vw;    
+/* ===================== FIM CONFIGURAÇÕES GLOBAIS ===================== */
+
+
+/* =============================== BODY ================================ */
+body {
+    width: 100vw;
     overflow-x: hidden;
-    user-select: none;
 }
+/* ============================= FIM BODY ============================== */
 
+
+/* =============================== ROOT ================================ */
 :root {
     /* Variáveis da cor azul */
     --azure: #E8F1F3;
@@ -25,50 +37,40 @@ body{
     --prussian_blue: #002F5B;
     --índigo_blue: #001030;
     --space: #010b1c;
-
     /* Variável da cor vermelha */
     --medium_red: #A20202;
     --vermelho: #ff0000;
     --tomate: #FF814D;
     --laranja: #ff5900;
-
     /* Variáveis da cor verde */
     --verde-azulado: #009a9f;
     --verde: #30EA66;
-
     --amarelo: #FCBF02;
     --cinza-clarinho: #F8F8F8;
     --azul-claro: #6E93f7;
     --azul-claro2: #4070F4;
     --winter: #A1E1F6;
-
-
     /* Variável da cor cinza */
     --cinza: #424242;
     --cinza-claro: #F2F2F2;
     --cinza-medio: #A9A9A9;
     --cinza-dark: #333333;
     --cinza-escuro: #171717;
-
     /* Variáveis das fontes */
     --Roboto: 'Roboto', sans-serif;
     --Allura: 'Allura', sans-serif;
-    --Rubik: 'Rubik Scribble';
-    --Kalam: 'Kalam';
     --Titillium: 'Titillium Web';
     --Poppins: 'Poppins';
-    --Livvic: 'Livvic';
 }
+/* ============================= FIM ROOT ============================== */
 
-/* =================== BANNER DO SITE =================== */
 
-
+/* ============================= CONTATO =============================== */
 .contato {
     width: 100%;
     margin: 0 auto;
     height: 50vh;
 }
-
 .contato-parallax{
     display: flex;
     height: 50vh ;
@@ -86,7 +88,6 @@ body{
     -moz-background-size: cover;
     -a-background-size:cover;
 }
-
 .contato-parallax::before {
     content:"";
     height: 100%;
@@ -94,8 +95,7 @@ body{
     position: absolute;
     z-index: 0;
     background: rgba(51,51,51,.6);
-  }
-
+}
 .texto-contato{
     z-index: 2;
     position: absolute;
@@ -106,9 +106,10 @@ body{
     color: white; 
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.397);
 }
-/* =================== FIM BANNER DO SITE =================== */
+/* =========================== FIM CONTATO ============================= */
 
-/* =================== FORMULARIO E LOCALIZAÇÃO =================== */
+
+/* ========================= FLEX FORMULÁRIO =========================== */
 .flex-formulario{
     display: flex;
     flex-wrap: wrap;
@@ -138,7 +139,6 @@ form{
 .formulario-titulo p{
     font: 300 15px var(--Roboto);
 }
-
 hr{
     margin: 20px 0; border: 0; height: 1px; border-top: 1px solid var(--cinza-medio);
 }
@@ -168,8 +168,96 @@ hr{
 .flex-info.fifth{
     grid-area: fifth;
 }
+label{
+    display: block;
+    text-align: left;
+    font: 400 14px var(--Roboto);
+}
+label span{
+    color: var(--vermelho);
+}
+select, input{
+    width: 100%;
+}
+select, input, textarea{
+    font: 300 14px var(--Roboto);  
+    text-align: justify;
+    margin-top: 5px; padding: 5px 0;
+    background-color: var(--cinza-clarinho);
+    border: 1px solid var(--cinza-medio);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.127);
+    text-indent: 1em; line-height: 1.5em;
+}
+select{
+    color: var(--space); 
+    outline: x solid var(--cinza-medio);
+}
+select option{
+    font: 300 14px var(--Roboto); 
+}
+input::placeholder{
+    color: var(--cinza-medio);
+}
+textarea{
+    vertical-align: top; 
+    /* Para permitir aos usuários redimensionarem qualquer textarea verticalmente. Ele não funciona em todos os browsers */
+    resize: none; width: 100%;
+}
+input:focus, textarea:focus{
+    outline: 1px solid var(--cinza-medio);
+}
+.button-submit-reset{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 30px;   
+    gap: 20px; 
+}
+.button-submit-reset .submit{
+    padding: 10px 55px; border: 1px solid transparent; background-color: var(--space); color: white; transition: .3s ease-in-out; font: 400 16px var(--Roboto);
+}
+.button-submit-reset .submit:hover{
+    border: 1px solid var(--space); color: var(--space); background-color: transparent;
+}
+.button-reset{
+    background-color: var(--laranja); padding: 10px 20px; border: 1px solid transparent; font: 400 16px var(--Roboto); color: white; transition: .3s ease-in-out;
+}
+.button-reset:hover{
+    color: var(--laranja); background-color: transparent;
+    border: 1px solid var(--laranja);
+}
+.flex-localizacao{
+    width: 500px; height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+iframe{
+    width: 500px;
+    height: 300px;
+}
+input[type=number]::-webkit-inner-spin-button { 
+    all: unset;  /* Remove as setas do input */
+}
+.informacao-empresa{
+    margin: 20px 0; text-decoration: none; 
+}
+.informacao-empresa div + div{
+    margin-top: 20px;
+}
+.empresa i{
+    color: var(--laranja); margin-right: 20px;
+}
+.empresa span{
+    font: 500 17px var(--Roboto); color: var(--space);
+}
+.empresa p{
+    font: 300 14px var(--Roboto); color: var(--space); margin-top: 10px; line-height: 1.5em;
+}
+/* ======================= FIM FLEX FORMULÁRIO ========================= */
 
 
+/* ================== MEDIA QUERY (MAX-WIDTH: 600px) =================== */
 @media screen and (max-width: 600px) {
     .contato, .contato-parallax{
         height: 40vh;
@@ -198,121 +286,21 @@ hr{
     .flex-info {
         width: 100%;
     }
-    .flex-localizacao .informacao-empresa{
-        margin: 20px 40px;
-    }
     .flex-localizacao{
         padding-top: 40px;
     }
     .flex-localizacao iframe{
         width: 100vw; padding-bottom: 20px;
     }
+    .flex-localizacao .informacao-empresa{
+        margin: 20px 40px;
+    }    
 }
+/* ================ FIM MEDIA QUERY (MAX-WIDTH: 600px) ================= */
 
 
-label{
-    display: block;
-    text-align: left;
-    font: 400 14px var(--Roboto);
-}
-label span{
-    color: var(--vermelho);
-}
-
-select, input{
-    width: 100%;
-}
-select option{
-    font: 300 14px var(--Roboto); 
-}
-select{
-    color: var(--space); 
-    outline: x solid var(--cinza-medio);
-}
-
-select, input, textarea{
-    font: 300 14px var(--Roboto);  
-    text-align: justify;
-    margin-top: 5px; padding: 5px 0;
-    background-color: var(--cinza-clarinho);
-    border: 1px solid var(--cinza-medio);
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.127);
-    text-indent: 1em; line-height: 1.5em;
-}
-
-textarea{
-    vertical-align: top; 
-    /* Para permitir aos usuários redimensionarem qualquer textarea verticalmente. Ele não funciona em todos os browsers */
-    resize: none; width: 100%; text
-}
-
-input:focus, textarea:focus{
-    outline: 1px solid var(--cinza-medio);
-}
-
-input::placeholder{
-    color: var(--cinza-medio);
-}
-
-
-.button-submit-reset{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    margin-top: 30px;   
-    gap: 20px; 
-}
-.button-submit-reset .submit{
-    padding: 10px 55px; border: 1px solid transparent; background-color: var(--space); color: white; transition: .3s ease-in-out; font: 400 16px var(--Roboto);
-}
-
-.button-submit-reset .submit:hover{
-    border: 1px solid var(--space); color: var(--space); background-color: transparent;
-}
-.button-reset{
-    background-color: var(--laranja); padding: 10px 20px; border: 1px solid transparent; font: 400 16px var(--Roboto); color: white; transition: .3s ease-in-out;
-}
-
-.button-reset:hover{
-    color: var(--laranja); background-color: transparent;
-    border: 1px solid var(--laranja);
-}
-
-.flex-localizacao{
-    width: 500px; height: 550px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-iframe{
-    width: 500px;
-    height: 300px;
-}
-
-input[type=number]::-webkit-inner-spin-button { 
-    all: unset;  /* Remove as setas do input */
-}
-
-.informacao-empresa{
-    margin: 20px 0; text-decoration: none; 
-}
-
-.empresa i{
-    color: var(--laranja); margin-right: 20px;
-}
-.empresa span{
-    font: 500 17px var(--Roboto); color: var(--space);
-}
-
-.empresa p{
-    font: 300 14px var(--Roboto); color: var(--space); margin-top: 10px; line-height: 1.5em;
-}
-.informacao-empresa div + div{
-    margin-top: 20px;
-}
-
-/* ========================================== Formulário Enviado! ========================================= */
+/* ===================================================================== */
+/* ======================== FORMULÁRIO ENVIADO ========================= */
 section.formulario-enviado{
     width: 100vw;
     height: auto;
@@ -346,10 +334,13 @@ section.formulario-enviado .texto-enviado button{
 section.formulario-enviado .texto-enviado a button:hover{
     background-color: transparent; border: 1px solid var(--laranja); color: var(--laranja);
 }
+/* ====================== FIM FORMULÁRIO ENVIADO ======================= */
 
 
+/* ================== MEDIA QUERY (MAX-WIDTH: 600px) =================== */
 @media screen and (max-width: 600px){
     section.formulario-enviado .texto-enviado span{
         font-size: 30px;
     }
 }
+/* ================ FIM MEDIA QUERY (MAX-WIDTH: 600px) ================= */

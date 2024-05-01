@@ -21,13 +21,10 @@
     <link rel="stylesheet" href="../css/HeaderFooter.css">
     <!-- FIm CSS -->
 
-    <!-- Demo styles -->
-
     <link rel="stylesheet" href="../css/contatos.css">
-    <title>Lima Refrigeração</title>
+    <title>Lima Refrigeração – Contatos</title>
 
 </head>
-
 
 <body>
     
@@ -37,11 +34,12 @@
             <button class="hamburger"></button>
             <ul class="nav-list">
                 <li><a href="../../index.html">Home</a></li>
-                <li><a href="sobre.html">Quem Somos</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
                 <li><a href="contatos.html">Contatos</a></li>
             </ul>
         </nav>
     </header>
+    
     <section class="contato">
         <div class="contato-parallax">
             <div class="texto-contato">
@@ -50,12 +48,9 @@
         </div>
     </section>
 
-    <main>
-      
-
+    <main> 
         <section class="flex-formulario">
             <div class="formulario">
-                
                 <form action="https://api.staticforms.xyz/submit" method="post">
                     <input type="text" name="honeypot" style="display: none;">
                     <div class="formulario-titulo">
@@ -68,13 +63,10 @@
                             <label for="nome">Nome Completo <span>*</span></label>
                             <input type="text" name="name" id="nome" required >
                         </div>
-
                         <div class="flex-info second">
                             <label for="email">E-mail <span>*</span></label>
-                            <input type="email" name="email" id="email" required >
+                            <input type="email" name="email" id="email" required>
                         </div>
-                        
-
                         <div class="flex-info third">
                             <label for="$subject">Assunto</label>
                             <select  type="text" name="$subject" id="subject">
@@ -83,26 +75,17 @@
                                 <option value="Reclamação">Reclamação</option>
                             </select>
                         </div>
-
                         <div class="flex-info fourth">
                             <label for="telefone">Telefone <span>*</span></label>
-                            <input type="tel" name="phone" id="telefone" placeholder="(DDD) 99999-9999" required maxlength="13" oninput="formatarTelefone(this)" >
-
+                            <input type="tel" name="phone" id="telefone" placeholder="(DDD) 99999-9999" required maxlength="13" oninput="formatarTelefone(this)">
                         </div>
-
                         <div class="flex-info fifth">
                             <label for="mensagem">Digite sua Mensagem <span>*</span></label>
                             <textarea name="message" id="msg" cols="30" rows="5" maxlength="1500" required></textarea>
                         </div>
-                    </div>
-
-                    
-
-                    
-
+                    </div>               
                     <div class="button-submit-reset"><button class="submit" type="submit" value="submit">Enviar</button>
                     <button class="button-reset" type="reset" >Limpar Campos</button></div>
-
                     <input type="hidden" name="accessKey" value="4a992e80-ae11-4541-8941-b669c7d81379">
                     <input type="hidden" name="redirectTo" value="https://lima-refrigeracao.netlify.app/assets/html/feedback.html">
                 </form>
@@ -111,9 +94,7 @@
             <div class="flex-localizacao">
                 <div class="localizacao">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3832.4776899429658!2d-47.95765232481684!3d-16.144297984546114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93599bb1953b4feb%3A0x5921bcef0fa3d5bf!2zTGltYSBSZWZyaWdlcmHDp8Ojbw!5e0!3m2!1spt-BR!2sbr!4v1714173086028!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-
-                
+                </div>                
                 <div class="informacao-empresa">
                     <div class="empresa">
                         <i class="fa-solid fa-phone"></i><span>LIGUE PARA NÓS</span>
@@ -123,7 +104,7 @@
                     </div>
                     <div class="empresa">
                         <i class="fa-solid fa-location-dot"></i><span>LOCALIZAÇÃO</span>
-                        <a href="https://maps.app.goo.gl/dMdfqiCDogeFhdhKA">
+                        <a href="https://maps.app.goo.gl/KmQ5BQLgXabrnxyc9">
                             <p class="endereço">Rua 9 de Julho, Quadra 54, Lote 23, Loja 02 - Jardim do Inga, Luziânia - GO, 72800-240</p>
                         </a>
                     </div>
@@ -131,16 +112,9 @@
                         <i class="fa-solid fa-clock"></i><span>HORÁRIO COMERCIAL</span>
                         <p class="horario">Seg a Sex: 08h - 18h, Sáb: 08h - 12h, Dom: Fechado  </p>
                     </div>
-                </div>
-                
+                </div>                
             </div>
-        </section>
-        
-       
-
-
-
-
+        </section>   
     </main>
 
     <footer class="rodape">
@@ -198,4 +172,6 @@
   }
 }
     </script>
+    
 </body>
+</html>

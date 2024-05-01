@@ -11,7 +11,6 @@ ScrollReveal().reveal('.txt-topo-site',{
     distance: '90px'    
 });
 
-
 /* Swiper */
 ScrollReveal().reveal('.swiper-wrapper, .flex-intro',{
     origin: "bottom",
@@ -19,16 +18,13 @@ ScrollReveal().reveal('.swiper-wrapper, .flex-intro',{
     distance: '200px',
 
 });
-
+/* Serviços */
 ScrollReveal().reveal('.servicos',{
     duration: 2000,
     distance: '200px',   
 });
 
-
-
-/* Topo do site */
-
+/* Quem Somos */
 ScrollReveal().reveal('.missao, .valores, .texto-visao, .carrossel',{
     origin: "bottom",
     duration: 2000, /* duração do efeito */

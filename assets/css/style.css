@@ -1,27 +1,33 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Rubik+Scribble&display=swap');
+/* ====================== FIM CONFIGURAÇÃO UNICODE ===================== */
+
+/* ========================= FONTES IMPORTADAS ========================= */
 @import url('https://fonts.googleapis.com/css2? family= Allura & family= Aref+Ruqaa+Ink:wght@400;700 & family= Cookie & family= Roboto:wght@300; 400;700 & display=swap');
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,900);
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
-@import url(https://fonts.googleapis.com/css?family=Livvic:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,900,900italic);
+/* ======================= FIM FONTES IMPORTADAS ======================= */
 
+
+/* ======================= CONFIGURAÇÕES GLOBAIS ======================= */
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
-    font-family: var(--Roboto);
     line-height: 1.5em;
 }
+/* ===================== FIM CONFIGURAÇÕES GLOBAIS ===================== */
 
+
+/* =============================== BODY ================================ */
 body {
     width: 100vw;
     overflow-x: hidden;
-    user-select: none;
 }
+/* ============================= FIM BODY ============================== */
 
+
+/* =============================== ROOT ================================ */
 :root {
     /* Variáveis da cor azul */
     --azure: #E8F1F3;
@@ -31,70 +37,58 @@ body {
     --prussian_blue: #002F5B;
     --índigo_blue: #001030;
     --space: #010b1c;
-
     /* Variável da cor vermelha */
     --medium_red: #A20202;
     --tomate: #FF814D;
-
     /* Variáveis da cor verde */
     --verde-azulado: #009a9f;
     --verde: #30EA66;
-
     --amarelo: #FCBF02;
     --cinza-clarinho: #F8F8F8;
     --azul-claro: #6E93f7;
     --azul-claro2: #4070F4;
     --winter: #A1E1F6;
-
-
     /* Variável da cor cinza */
     --cinza: #424242;
     --cinza-claro: #F2F2F2;
     --cinza-medio: #A9A9A9;
     --cinza-dark: #333333;
     --cinza-escuro: #171717;
-
     /* Variáveis das fontes */
     --Roboto: 'Roboto', sans-serif;
     --Allura: 'Allura', sans-serif;
-    --Rubik: 'Rubik Scribble';
-    --Kalam: 'Kalam';
     --Titillium: 'Titillium Web';
     --Poppins: 'Poppins';
-    --Livvic: 'Livvic';
 }
+/* ============================= FIM ROOT ============================== */
 
-/* ======================= Carrossel Banner ======================== */
+
+/* ========================= CARROSSEL BANNER ========================== */
 .slider {
     margin: 0 auto;
     width: 100%;
     height: 100vh;
     overflow: hidden;
 }
-
 .slides {
     width: 400%;
     height: 100%;
     display: flex;
 }
-
 .slides input {
     display: none;
 }
-
 .slide {
     width: 100vw;
     left: 0;
     position: relative;
     transition: 1s;
 }
-
 .slide img {
     /* Sempre levar em consideração o tamanho original da imagem e da tela */
     height: 100%;
     width: 100%;
 }
-
 .manual-navigation {
     position: absolute;
     width: 100vw;
@@ -102,7 +96,6 @@ body {
     display: flex;
     justify-content: center;
 }
-
 .manual-btn {
     border: 2.3px solid white;
     padding: 7px;
@@ -110,32 +103,25 @@ body {
     cursor: pointer;
     transition: .7s;
 }
-
 .manual-btn:not(:last-child) {
     margin-right: 2vw;
 }
-
 .manual-btn:hover {
     background-color: white;
 }
-
 #radio1:checked~.first {
     margin-left: 0;
 }
-
 #radio2:checked~.first {
 
     margin-left: -100vw;
 }
-
 #radio3:checked~.first {
     margin-left: -200vw;
 }
-
 #radio4:checked~.first {
     margin-left: -300vw;
 }
-
 .navigation-auto div {
     border: 2.3px solid white;
     padding: 7px;
@@ -143,7 +129,6 @@ body {
     cursor: pointer;
     transition: .7s;
 }
-
 .navigation-auto {
     position: absolute;
     width: 100vw;
@@ -151,27 +136,21 @@ body {
     display: flex;
     justify-content: center;
 }
-
 .navigation-auto div:not(:last-child) {
     margin-right: 2vw;
 }
-
 #radio1:checked~.navigation-auto .auto-btn1 {
     background-color: white;
 }
-
 #radio2:checked~.navigation-auto .auto-btn2 {
     background-color: white;
 }
-
 #radio3:checked~.navigation-auto .auto-btn3 {
     background-color: white;
 }
-
 #radio4:checked~.navigation-auto .auto-btn4 {
     background-color: white;
 }
-
 .texto_sobreposto {
     display: flex;
     position: absolute;
@@ -183,7 +162,6 @@ body {
     height: 100%;
     background-color: rgb(0 0 0 / 59%);
 }
-
 .texto_sobreposto img {
     width: auto;
     height: 60vh;
@@ -192,152 +170,66 @@ body {
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.515));
     /* Sombra da imagem alpha */
 }
-
 .texto_sobreposto h1 {
     width: 50%;
     font: 500 3vw var(--Roboto);
     color: white;
-    margin-left: 40px;
+    margin-left: 70px;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.259);
     line-height: 1.5em;    
     /* Espçamento do Parágrafo */
-} 
-
-
-
+}
 .fa-phone{
     margin-right: 20px;
 }
-
 .botao {
     position: absolute;
     bottom: 25%;
-    margin-left: 40px;
+    margin-left: 70px;
 }
 .btn-first{
-    border: transparent;
+    border: 1px solid transparent; font: 400 16px var(--Roboto); background-color: var(--índigo_blue); color: white;
     padding: 10px 20px;
-    border-radius: 15px;
+    border-radius: 50px; transition: .3s ease-in-out;
 }
+.btn-first:hover{
+    transform: scale(1.03);
+}
+/* ======================= FIM CARROSSEL BANNER ======================== */
 
 
-/* ======================= Fim Carrossel Banner ======================== */
-
+/* ======================== NOSSOS COMPROMISSOS ======================== */ 
 .Nossos_compromissos {
     position: relative;
     height: 550px;
     width: 100vw;
     justify-content: center;
 }
-
-
-/* ========================== Carrossel Diferenciais ========================== */
-.mySwiper{
-    height: auto;
-}
-
-.swiper {
-    width: 76%;
-    height: 50%;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.swiper-slide {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 240px;
-    width: 255px;
-}
-
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-/* ========================== Carrossel Diferenciais ========================== */
 .intro_compromissos {
     display: flex;
     align-items: center;
+    width: 100vw;
+    justify-content: center;
     height: 70%;
     background-color: var(--space);
 }
-
 .flex-intro{
     position: absolute;
     top: 25%;
     left: 50%;
+    flex-wrap: wrap;
     transform: translate(-50%, -50%);
-    width: 100%;
+    width: 76vw;
     height: 50%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-}
-
-@media (max-width: 767px){
-    
-    .slide img{
-        width: 100vw;
-        overflow: hidden;
-        object-fit: cover; object-position: -350px 0px;
-    }
-    .texto_sobreposto img{
-        display: none;
-    }
-    .texto_sobreposto h1{ 
-        width: 100%;  
-        margin: 40px;     
-        font-size: 30px;
-    }
-    .flex-intro{
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
-    .intro_compromissos .flex-intro h1{
-        width: 100vw;
-        text-align: center;
-        margin: 35px 10px;
-    }
-    .swiper {
-        width: 100%;
-        height: 50%;
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    section h1.titulo-secao, .container-wrapper h1.titulo-secao{
-        font-size: 30px;
-    }
-    .module.parallax span{
-        letter-spacing: .280em;
-        margin-bottom: 30px;
-    }
-    .module.parallax h1.titulo-secao{
-        width: auto;
-        text-align: center;
-        margin: 0 10px;
-    }
-    :focus {
-        outline: none;
-    }
-
 }
 .intro_compromissos h1 {
     width: 700px;
     color: white;
     font: 700 40px var(--Titillium);
 }
-
-
 .intro_compromissos button {
     padding: 15px 35px;
     background-color: white;
@@ -352,15 +244,31 @@ body {
     color: white;
     border: 1px solid white;
 }
-
-
+.mySwiper{
+    height: auto;
+}
+.swiper {
+    width: 76%;
+    height: 50%;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 240px;
+    width: 255px;
+}
 #icon img {
     width: 80px;
     height: 80px;
     margin-bottom: 10px;
 
 }
-
 #icon {
     padding: 20px;
     width: 250px;
@@ -375,28 +283,22 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.06);
     border-bottom: 3px solid var(--prussian_blue);
 }
-
 #icon span{
     font: 600 24px var(--Titillium);
     color: var(--space);
 }
-
 #icon:hover{
     transform: scale(1.02);
 }
-
 .icon1::after {
     content: "Diferentes soluções para cada situação";
 }
-
 .icon2::after {
     content: "Utilizamos exclusivamente peças originais em todas as nossas manutenções e reparos";
 }
-
 .icon3::after {
     content: "Agende já sua visita e tenha a comodidade de receber um orçamento detalhado sem sair de casa.";
 }
-
 .icon4::after {
     content: "Conte conosco para um serviço confiável e duradouro!";
 }
@@ -406,8 +308,6 @@ body {
 .icon6::after {
     content: "Garantimos que seu eletrodoméstico seja reparado e devolvido a você dentro do prazo estabelecido.";
 }
-
-
 #icon::after {
     position: absolute;
     background-color: white;
@@ -425,33 +325,33 @@ body {
     justify-content: center;
     font: 500 20px var(--Titillium);
 }
-
 #icon:hover::after {
     opacity: 1;
 }
-
-
-
-
-
-
-/* ======================= Seção Serviços ======================= */
-.texto_servico h1 {
-    text-align: center;
-    font: bolder 35px var(--Roboto);
-    color: var(--índigo_blue);
-    margin: 0 0 25px 0;
-    z-index: 2;
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
+/* ====================== FIM NOSSOS COMPROMISSOS ======================= */
 
+
+/* ============================== SERVIÇOS ============================== */
 .servicos{
     height: auto;
     margin: 20px 0 50px 0;
 }
+.texto_servico h1 {
+    text-align: center;
+    font: 600 35px var(--Roboto);
+    color: var(--índigo_blue);
+    margin: 0 0 25px 0;
+    z-index: 2;
+}
 .servicos-ctn{
     z-index: 4;
 }
-
 .flex-servicos{
    display: flex;
    flex-wrap: wrap;
@@ -465,17 +365,25 @@ body {
     max-width: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.134);
 }
- .flex-container{
+.flex-container{
     width: 550px;
     margin: 10px 25px;
     align-items: baseline;
 }
-.flex-container p{
-    text-align: justify;
+section.servicos details{
+    padding: 0;
+    background-color: white;
+    box-shadow: 2px 2px 10px  rgba(67, 67, 67, 0.147);
+    cursor: pointer;
 }
-section.servicos details[open] summary, section.servicos details summary:hover {
-    background-color: var(--verde-azulado);
-    color: white;
+section.servicos details:not(:last-child){
+    margin-bottom: 19px;
+}
+section.servicos details p{
+    font: 300 18px var(--Roboto);
+    line-height: 1.5em;
+    padding: 8px 20px;
+    text-align: justify;
 }
 section.servicos details summary{
     padding: 15px 30px;
@@ -483,18 +391,6 @@ section.servicos details summary{
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-section.servicos .fi.fi-rr-air-conditioner{
-    color: var(--cinza-dark);
-}
-section.servicos .fa-solid.fa-snowflake{
-    color: var(--winter);
-}
-section.servicos .fi.fi-rr-heat{
-    color: var(--medium_red);
-}
-section.servicos .fas.fa-tools{
-    color: var(--prussian_blue);
 }
 section.servicos details summary .ttn{
     transition: .3s ease-in-out;
@@ -509,24 +405,23 @@ section.servicos details summary h2 i{
     margin-right: 20px;
 }
 section.servicos details summary h2{
-    font: 600 20px var(--Livvic);
+    font: 400 20px var(--Roboto);
 }
-
-
-section.servicos details{
-    padding: 0;
-    background-color: white;
-    box-shadow: 2px 2px 10px  rgba(67, 67, 67, 0.147);
-    cursor: pointer;
+section.servicos details[open] summary, section.servicos details summary:hover {
+    background-color: var(--verde-azulado);
+    color: white;
 }
-
-section.servicos details:not(:last-child){
-    margin-bottom: 19px;
+section.servicos .fi.fi-rr-air-conditioner{
+    color: var(--cinza-dark);
 }
-section.servicos details p{
-    font: 400 19px var(--Livvic);
-    line-height: 1.5em;
-    padding: 8px 18px;
+section.servicos .fa-solid.fa-snowflake{
+    color: var(--winter);
+}
+section.servicos .fi.fi-rr-heat{
+    color: var(--medium_red);
+}
+section.servicos .fas.fa-tools{
+    color: var(--prussian_blue);
 }
 .fa-solid.fa-chevron-up{
     font-size: 12px;
@@ -535,13 +430,11 @@ section.servicos details p{
 section.servicos details[open] summary .fa-solid.fa-chevron-up{
     transform: rotate(180deg);
 }
+/* ============================ FIM SERVIÇOS ============================ */
 
 
-/* ===================== Fim Seção Serviços ====================== */
-
-
-/* ======================= Paralalax ======================================== */
-.container-wrapper{
+/* ========================= CONTAINER PARALLAX ========================= */
+.container-parallax{
     width: 100%;
     margin: 0 auto;
 }
@@ -579,13 +472,9 @@ section.module a button:hover{
     color: white;
     border: 1px solid white;
 }
-
-
-
 section.module:last-child{
     margin-bottom: 0;
 }
-
 section.module.parallax{
     display: flex;
     flex-direction: column;
@@ -594,6 +483,7 @@ section.module.parallax{
     width: 100%;
     position: relative;
     overflow: hidden;
+    background-image: url(../img/parallax.png);
     background-position: 50% 50% ;
     background-repeat: no-repeat;
     background-attachment: fixed; /* cria o efeito parallax */
@@ -601,7 +491,6 @@ section.module.parallax{
     -webkit-background-size:cover ; /* para ser funcional em outros navegadores */
     -moz-background-size: cover;
     -a-background-size:cover;
-
 }
 section.module.parallax::after{
     content:"";
@@ -613,58 +502,44 @@ section.module.parallax::after{
     background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 0% #00000094 100%);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #00000094 100%);
 }
-
-section.module.parallax{
-    background-image: url(../img/parallax.png);
-}
+/* ======================= FIM CONTAINER PARALLAX ======================= */
 
 
-
-
-
-
-
-details {
-    padding: 20px;
-    margin: 5px;
-}
-
-.faq hr {
-    margin: 0 10px;
-    border-top: 2px solid #ECECEC;
-
-}
-
+/* ================================ FAQ ================================ */
 .faq {
     margin: 20px 5vw 60px;
     font: bolder 27px var(--Roboto);
     color: var(--índigo_blue);
     line-height: 1.5em;
 }
-
+.text_faq {
+    text-align: center;
+    padding: 20px;
+    color: var(--space);
+}
 .summary_faq {
     background-color: var(--cinza-claro);
     border: solid 1px #F0F0F0;
     border-radius: 25px;
     cursor: pointer;
 }
+details {
+    padding: 20px;
+    margin: 5px;
+}
 details summary {
     font: normal 18px var(--Roboto);
     color: var(--cinza);
     align-items: center; 
 }
-
-details[open] summary .fa-plus {
-    transform: rotate(45deg);
-}
-
-
 .summary_faq details i {
     margin-right: 20px;
     color: var(--cinza-medio);
     transition: .5s ease;
 }
-
+details[open] summary .fa-plus {
+    transform: rotate(45deg);
+}
 details p {
     padding: 20px;
     font: normal 17px var(--Roboto); color: var(--cinza);
@@ -672,29 +547,28 @@ details p {
     line-height: 1.7em;
     text-indent: 1.25em;
 }
+.faq hr {
+    margin: 0 10px;
+    border-top: 2px solid #ECECEC;
 
+}
 details ol {
     padding: 35px;
     list-style-type: none;
 }
-
 details ol li {
     list-style: decimal;
     font-size: 16px;
 }
-
 details ol li p {
     padding: 5px 0;
     line-height: 1.5em;
     text-align: justify;
 }
+/* ============================== FIM FAQ ============================== */
 
-.text_faq {
-    text-align: center;
-    padding: 20px;
-    color: var(--space);
-}
 
+/* =========================== ÍCONE SOCIAL =========================== */
 .whatsapp{
     position: fixed;
     z-index: 3;
@@ -705,15 +579,83 @@ details ol li p {
     filter: drop-shadow(0 0 10px #00000013);
     transition: opacity .3s ease-in-out;
 }
-
 .whatsapp i {
     background-color: var(--verde);
     padding: 15px;
     border-radius: 100%;
     transition: all .3s;
 }
+/* ========================= FIM ÍCONE SOCIAL ========================= */
 
-/* ================= SCROLL REVEAL =================*/
-.txt-topo-site, .img-topo-site, .flex-intro, .swiper-wrapper, .servicos{
+
+/* ================== MEDIA QUERY (MAX-WIDTH: 600px) ================== */
+@media (max-width: 600px){
+    .slide img{
+        object-position: -350px 0px;
+    }
+}
+/* ================ FIM MEDIA QUERY (MAX-WIDTH: 600px) ================ */
+
+
+/* ================== MEDIA QUERY (MAX-WIDTH: 767px) ================== */
+@media (max-width: 767px){
+    .slide img{
+        width: 100vw;
+        overflow: hidden;
+        object-fit: cover; 
+    }
+    .texto_sobreposto img{
+        display: none;
+    }
+    .texto_sobreposto h1{ 
+        width: 100%;  
+        margin: 40px;     
+        font-size: 30px;
+    }
+    .botao{
+        margin-left: 40px;
+    }
+    .flex-intro{
+        width: 100vw; height: auto; top: 20%;
+        justify-content: center;
+    }
+    .intro_compromissos .flex-intro h1{
+        width: 100vw;
+        text-align: center;
+        margin: 0px 10px 25px 10px;
+    }
+    .swiper {
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    section h1.titulo-secao, .container-wrapper h1.titulo-secao{
+        font-size: 30px;
+    }
+    section.servicos h1.titulo-secao{
+        margin:25px;
+    }
+    .module.parallax span{
+        letter-spacing: .280em;
+        margin-bottom: 30px;
+    }
+    .module.parallax h1.titulo-secao{
+        width: auto;
+        text-align: center;
+        margin: 0 10px;
+    }
+    :focus {
+        outline: none;
+    }
+}
+/* ================ FIM MEDIA QUERY (MAX-WIDTH: 767px) ================ */
+
+
+/* ========================== SCROLL REVEAL ========================== */
+.img-topo-site, .txt-topo-site, .swiper-wrapper, .flex-intro, .servicos{
     visibility: hidden;
 }
+/* ======================== FIM SCROLL REVEAL ======================== */
