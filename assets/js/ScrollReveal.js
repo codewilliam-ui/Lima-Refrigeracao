@@ -32,3 +32,11 @@ ScrollReveal().reveal('.missao, .valores, .texto-visao, .carrossel',{
     delay: 500, /* tempo de atraso para começar o efeito */    
 });
 
+
+/* Cookie */
+ScrollReveal().reveal('.cookies',{
+    origin: "bottom",
+    duration: 3000, /* duração do efeito */
+    distance: '90px',
+    delay: 800, /* tempo de atraso para começar o efeito */    
+});

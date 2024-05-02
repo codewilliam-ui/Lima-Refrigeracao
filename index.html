@@ -417,6 +417,22 @@
         </footer>
     </main>
 
+    <div class="popup" id="popup">
+        <div class="cookies">
+            <div class="cookies-mensagem">
+                <div class="flex-cookies-msg">
+                    <div class="titulo-cookies"><img src="assets/img/cookie.png" alt="Cookie" href="https://www.flaticon.com/free-icons/cookie"><span> Esse site usa cookies!</span></div>
+                    <i class="fa-solid fa-plus mbl" onclick="saida()"></i>
+                </div>
+                <p>Para garantir uma experiência ainda mais personalizada, utilizamos cookies, inclusive de terceiros, para análise e personalização de conteúdo. Ao prosseguir com a navegação, você concorda com nossa <a href="inicio/politica.html">Política de Privacidade.</a></p>
+            </div>
+            <div class="cookies-button">
+                <button onclick="acept()">Aceito</button>
+                <i class="fa-solid fa-plus dsktp" onclick="saida()"></i>
+            </div>
+        </div>
+    </div>
+
     <!-- <script src="assets/js/script.js"></script> -->
     <script src="assets/js/app.js"></script>
 
@@ -459,6 +475,8 @@
             },
         });
     </script>
+
+    <script src="assets/js/cookies.js"></script>
 
 </body>
 </html>

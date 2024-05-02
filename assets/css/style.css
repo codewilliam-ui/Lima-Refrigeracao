@@ -31,6 +31,7 @@ body {
 :root {
     /* Variáveis da cor azul */
     --azure: #E8F1F3;
+    --azul: #0346F2;
     --carolina_blue: #1C9CD7;
     --celadon_blue: #247BA0;
     --sapphire_blue: #014990;
@@ -588,6 +589,70 @@ details ol li p {
 /* ========================= FIM ÍCONE SOCIAL ========================= */
 
 
+/* ============================= COOKIES ============================== */
+.popup{
+    display: none;
+}
+.popup.exibir{
+    display: block;
+}
+.cookies{
+    width: 100vw;
+    height: auto;
+    background-color: var(--space);
+    position: fixed;
+    z-index: 10;
+    bottom: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cookies .cookies-mensagem{
+    margin: 40px 0 40px 40px; width: 72%;
+}
+.cookies .cookies-mensagem .flex-cookies-msg{
+    display: flex; justify-content: space-between;
+    align-items: center; margin-bottom: 30px;
+    font: 600 18px var(--Poppins); color: white;
+}
+.cookies .cookies-mensagem .flex-cookies-msg i.fa-solid.fa-plus.mbl{
+    display: none;
+}
+.cookies .cookies-mensagem .flex-cookies-msg i, .cookies .cookies-button i.fa-solid.fa-plus.dsktp{
+    transform: rotate(45deg); color: var(--space);
+    padding: 5px 6px; border-radius: 35px; background-color: var(--cinza-clarinho); cursor: pointer;
+}
+.cookies .cookies-mensagem .flex-cookies-msg .titulo-cookies{
+    display: flex;
+}
+.cookies .cookies-mensagem .flex-cookies-msg .titulo-cookies span{
+    margin-left: 15px;
+}
+.cookies .cookies-mensagem .flex-cookies-msg .titulo-cookies img{
+    width: auto; height: 30px;
+}
+.cookies .cookies-mensagem p{
+    font: 300 16px var(--Poppins); line-height: 1.75em;
+    color: white;
+}
+.cookies .cookies-mensagem p a{
+    color: white; border-bottom: 1px solid white; cursor: pointer;
+}
+.cookies .cookies-button{
+    text-align: center; margin: 0 40px;
+}
+.cookies .cookies-button button{
+    padding: 10px 80px; border: 1px solid transparent; background-color: var(--azul); color: white; font: 500 16px var(--Poppins); transition: .2s;
+}
+.cookies .cookies-button button:hover{
+    transform: scale(1.01);
+}
+.cookies .cookies-button i.fa-solid.fa-plus.dsktp{
+    display: inline; position: absolute; top: 25px; right: 45px;
+}
+/* =========================== FIM COOKIES ============================ */
+
+
 /* ================== MEDIA QUERY (MAX-WIDTH: 600px) ================== */
 @media (max-width: 600px){
     .slide img{
@@ -650,12 +715,30 @@ details ol li p {
     :focus {
         outline: none;
     }
+    .cookies{
+        flex-wrap: wrap;
+    }
+    .cookies .cookies-mensagem .flex-cookies-msg i.fa-solid.fa-plus.mbl{
+        display: block; 
+    }
+    .cookies .cookies-button i.fa-solid.fa-plus.dsktp{
+        display: none;
+    }
+    .cookies .cookies-mensagem{
+        margin: 40px; width: auto;
+    }
+    .cookies .cookies-button{
+        margin: 0 40px;
+    }
+    .cookies .cookies-button button{
+        padding: 10px 140px; margin-bottom: 40px;
+    }   
 }
 /* ================ FIM MEDIA QUERY (MAX-WIDTH: 767px) ================ */
 
 
 /* ========================== SCROLL REVEAL ========================== */
-.img-topo-site, .txt-topo-site, .swiper-wrapper, .flex-intro, .servicos{
+.img-topo-site, .txt-topo-site, .swiper-wrapper, .flex-intro, .servicos, .cookies{
     visibility: hidden;
 }
 /* ======================== FIM SCROLL REVEAL ======================== */
