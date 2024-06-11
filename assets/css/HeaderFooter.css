@@ -286,10 +286,12 @@ body {
   background-color: var(--índigo_blue);
   border-radius: 50%;
 }
-.copyright p {
+.copyright p{
   text-align: center;
   padding-top: 20px;
-  color: white;
   font: normal 14px var(--Allura);
+}
+.copyright p a{
+  text-decoration: none; color: white;
 }
 /* ============================ FIM RODAPÉ ============================= */
