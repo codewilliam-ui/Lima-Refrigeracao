@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" tamanhos="57x57" href="../assets/img/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" tamanhos="60x60" href="../assets/img/icon/apple -icon-60x60.png">
+    <link rel="apple-touch-icon" tamanhos="72x72" href="../assets/img/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" tamanhos="76x76" href="../assets/img/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" tamanhos="114x114" href="../assets/img/icon/apple-icon-114x114.png">
+    <link rel=" apple-touch-icon" tamanhos="120x120" href="../assets/img/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" tamanhos="144x144" href="../assets/img/icon/apple-icon-144x144. png">
+    <link rel="apple-touch-icon" tamanhos="152x152" href="../assets/img/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" tamanhos="180x180" href="../assets/img/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" tamanhos="192x192" href="../assets/img/icon/android-icon-192x192.png">
+    <link rel="icon" type="imagem/png" tamanhos="32x32" href="../assets/img/icon/favicon-32x32.png">
+    <link rel="icon" type="imagem/png" tamanhos="96x96" href="../assets/img/icon/favicon-96x96. png">
+    <link rel="icon" type="image/png" tamanhos="16x16" href="../assets/img/icon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/img/icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/img/icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--Font Awesome (Ícones onlines)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!--Fim Font Awesome-->
+    <title>Suporte - Code Sphere Innovation</title>
+</head>
+<style>
+    body{
+        height: 100vh;
+        width: 100vw;
+        background: linear-gradient(45deg, #AB1AE9, #5732CD);
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+    }
+    .container-flex{
+        position: relative;
+        width: 100vw;
+        height: 200px;
+        background-color: white;
+    }
+    .container-flex .midias{
+        width: 100vw;
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .container-flex .midias a{
+        background-color: white;
+        text-decoration: none;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.186);
+    }
+    .container-flex .midias a .contato{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 10px;
+    }
+</style>
+<body>
+    <div class="container-flex">
+        <div class="midias">
+            <a href="https://www.codinn.com.br" target="_blank" rel="noopener">
+                <div class="contato">
+                    <i class="fa-solid fa-globe"></i>
+                    <h3>Visite Nosso Site</h3>
+                    <p>Code Sphere Innovation</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="contato">
+                    <i class="fa-brands fa-google"></i>
+                    <h3>Gmail</h3>
+                    <p></p>
+                </div>
+            </a>
+            <a href="">
+                <div class="contato">
+                    <i class="fa-brands fa-instagram"></i>
+                    <h3>Instagram</h3>
+                    <p></p>
+                </div>
+            </a>
+            <a href="">
+                <div class="contato">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <h3>whatsapp</h3>
+                    <p></p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="formulario-flex">
+        <div class="formulario">
+            <form action="" method="get">
+                <label for="name">Nome</label>
+                <input type="text" name="name" id="name" placeholder="Digite seu Nome" required>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu melhor e-mail" required>
+                <label for="subject">Assunto</label>
+                            <select  type="text" name="subject" id="subject" required>
+                                <option value="Dúvida">Dúvida</option>
+                                <option value="Sugestão">Sugestão</option>
+                                <option value="Reclamação">Reclamação</option>
+                            </select>
+                <label for="message">Message</label>
+                <input type="text" name="message" id="message" required>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </form>
+        </div>
+        <div class="informacao">
+            <h1></h1>
+            <span></span>
+            <p></p>
+            <div class="icon-flex">
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
